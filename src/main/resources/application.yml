@@ -1,0 +1,30 @@
+server:
+  port: 9098
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.56.181.180:3306/workboard?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+ucode:
+  code:
+#     配置生成代码的路径
+    package-name: cn.cestc
+    use-swagger: true
+    xml:
+      add-xml: true
+    controller:
+      add-note-info: true
+#MINIO
+oss:
+  name: minio
+  accessKey: minio_access_key
+  secretKey: minio_secret_key
+  bucketName: iris
+  endpoint: http://10.32.76.16:9000
+  fileExt: txt,word
+
+
+
