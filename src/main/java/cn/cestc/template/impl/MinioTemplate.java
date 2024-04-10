@@ -443,38 +443,62 @@ public class MinioTemplate implements OssTemplate {
     /**
      * 获取文件内部数据
      *
-     * @param bucketName 存储桶名称
      * @param folderName 目录名称
      * @param fileNames  文件名列表，如果为null或空，则获取所有文件的内部数据
      * @return List<byte[]> 文件内部数据列表
      */
     @Override
-    public List<byte[]> getFileData(String bucketName, String folderName, List<String> fileNames) {
-        List<byte[]> fileDataList = new ArrayList<>();
+    public List<String> getFileData(String folderName, List<String> fileNames) {
+        String bucketName = ossProperties.getBucketName();
+        List<String> fileDataList = new ArrayList<>();
+
         try {
-            Iterable<Result<Item>> results;
-            if (fileNames != null && !fileNames.isEmpty()) {
-                results = client.listObjects(
-                        ListObjectsArgs.builder().bucket(getBucketName(bucketName)).prefix(folderName + "/")
-                                .build());
-            } else {
-                results = client.listObjects(
-                        ListObjectsArgs.builder().bucket(getBucketName(bucketName)).build());
-            }
+            Iterable<Result<Item>> results = client.listObjects(ListObjectsArgs.builder()
+                    .bucket(getBucketName(bucketName))
+                    .prefix(folderName + "/")
+                    .build());
 
             for (Result<Item> result : results) {
                 Item item = result.get();
                 if (fileNames == null || fileNames.isEmpty() || fileNames.contains(getFileNameFromPath(item.objectName()))) {
-                    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                    client.getObject(GetObjectArgs.builder().bucket(getBucketName(bucketName)).object(item.objectName()).build());
-                    fileDataList.add(outputStream.toByteArray());
+                    InputStream inputStream = null;
+                    try {
+                        inputStream = client.getObject(GetObjectArgs.builder()
+                                .bucket(getBucketName(bucketName))
+                                .object(item.objectName())
+                                .build());
+
+                        String fileData = readInputStream(inputStream);
+                        fileDataList.add(fileData);
+
+                        // 打印文件数据（示例）
+                        System.out.println(fileData);
+                    } finally {
+                        if (inputStream != null) {
+                            inputStream.close();
+                        }
+                    }
                 }
             }
         } catch (Exception e) {
             logger.error("minio getFileData Exception:{}", e);
         }
+
         return fileDataList;
     }
+
+    private String readInputStream(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        byte[] buffer = new byte[1024];
+        int bytesRead;
+        while ((bytesRead = inputStream.read(buffer)) != -1) {
+            outputStream.write(buffer, 0, bytesRead);
+        }
+        return outputStream.toString();
+    }
+
+
+
 
 
 }
