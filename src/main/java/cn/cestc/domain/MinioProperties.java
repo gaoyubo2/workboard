@@ -42,7 +42,7 @@ public class MinioProperties {
     /**
      * 默认的存储桶名称
      */
-    private String bucketName = "meng";
+    private String bucketName = "iris";
 
     /**
      * 可上传的文件后缀名
