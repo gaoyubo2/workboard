@@ -80,10 +80,9 @@ public interface OssTemplate {
     /**
      * 获取文件内部数据
      *
-     * @param bucketName 存储桶名称
      * @param folderName 目录名称
      * @param fileNames  文件名列表，如果为null或空，则获取所有文件的内部数据
      * @return List<byte[]> 文件内部数据列表
      */
-    List<byte[]> getFileData(String bucketName, String folderName, List<String> fileNames);
+    List<String> getFileData(String folderName, List<String> fileNames);
 }

@@ -1,5 +1,9 @@
 package cn.cestc.template.impl;
 
+import cn.cestc.handler.FileHandler;
+import cn.cestc.handler.impl.ExcelFileHandler;
+import cn.cestc.handler.impl.TextFileHandler;
+import cn.cestc.handler.impl.WordFileHandler;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.IoUtil;
@@ -23,7 +27,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +34,9 @@ import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 /**
@@ -43,7 +48,17 @@ import java.util.stream.Stream;
 @Service
 public class MinioTemplate implements OssTemplate {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    //策略模式处理不同的文件类型
+    private final Map<String, FileHandler> fileHandlers;
+    public MinioTemplate() {
+        fileHandlers = new HashMap<>();
+        fileHandlers.put("txt", new TextFileHandler());
+        fileHandlers.put("docx",new WordFileHandler());
+        fileHandlers.put("doc",new WordFileHandler());
+        fileHandlers.put("excel",new ExcelFileHandler());
+        // 添加其他文件类型的处理策略
+    }
 
     /**
      * MinIO客户端
@@ -84,8 +99,8 @@ public class MinioTemplate implements OssTemplate {
     }
 
     /**
-     * @Description: 创建 存储桶
-     * @Param bucketName: 存储桶名称
+     * @Description:  : 创建 存储桶
+     * @param  bucketName: 存储桶名称
      */
     public void makeBucket(String bucketName) {
         try {
@@ -139,8 +154,8 @@ public class MinioTemplate implements OssTemplate {
         if (file == null || file.isEmpty()) {
 //            throw new RuntimeException("400", "文件不能为空");
 
-            System.out.println("文件为null");
-            throw new RuntimeException("文件为null");
+            System.out.println("文件不能为空");
+            throw new RuntimeException("文件不能为空");
         }
         // 文件大小
         if (file.getSize() > 5 * 1024 * 1024) {
@@ -197,7 +212,7 @@ public class MinioTemplate implements OssTemplate {
     }
 
     /**
-     * @deprecated : 上传文件
+     * 上传文件
      * @param  bucketName: 存储桶名称
      * @param folderName: 上传的文件夹名称
      * @param fileName: 上传文件名
@@ -309,14 +324,14 @@ public class MinioTemplate implements OssTemplate {
      * @param expires    过期时间
      * @return url
      */
-    public String getPresignedObjectUrl(String bucketName, String fileName, Integer expires) {
+    public String getResignedObjectUrl(String bucketName, String fileName, Integer expires) {
         String link = "";
         try {
             link = client.getPresignedObjectUrl(
                     GetPresignedObjectUrlArgs.builder().method(Method.GET).bucket(getBucketName(bucketName))
                             .object(fileName).expiry(expires).build());
         } catch (Exception e) {
-            logger.error("minio getPresignedObjectUrl is fail, fileName:{}", fileName);
+            logger.error("minio getResignedObjectUrl is fail, fileName:{}", fileName);
         }
         return link;
     }
@@ -340,8 +355,6 @@ public class MinioTemplate implements OssTemplate {
      * @return string 上传的文件夹名称/yyyyMMdd/原始文件名_时间戳.文件后缀名
      */
     private String getFilePath(String folderName, String originalFilename, String suffix) {
-//        return StrPool.SLASH + String.join(StrPool.SLASH, folderName, DateUtil.date().toString(DATE_FORMAT),
-//                originalFilename) + StrPool.C_UNDERLINE + DateUtil.current() + StrPool.DOT + suffix;
         return folderName +
                 "/" +
                 originalFilename;
@@ -443,38 +456,53 @@ public class MinioTemplate implements OssTemplate {
     /**
      * 获取文件内部数据
      *
-     * @param bucketName 存储桶名称
      * @param folderName 目录名称
      * @param fileNames  文件名列表，如果为null或空，则获取所有文件的内部数据
      * @return List<byte[]> 文件内部数据列表
      */
     @Override
-    public List<byte[]> getFileData(String bucketName, String folderName, List<String> fileNames) {
-        List<byte[]> fileDataList = new ArrayList<>();
+    public List<String> getFileData(String folderName, List<String> fileNames) {
+        String bucketName = ossProperties.getBucketName();
+        List<String> fileDataList = new ArrayList<>();
+
         try {
-            Iterable<Result<Item>> results;
-            if (fileNames != null && !fileNames.isEmpty()) {
-                results = client.listObjects(
-                        ListObjectsArgs.builder().bucket(getBucketName(bucketName)).prefix(folderName + "/")
-                                .build());
-            } else {
-                results = client.listObjects(
-                        ListObjectsArgs.builder().bucket(getBucketName(bucketName)).build());
-            }
+            Iterable<Result<Item>> results = client.listObjects(ListObjectsArgs.builder()
+                    .bucket(getBucketName(bucketName))
+                    .prefix(folderName + "/")
+                    .build());
 
             for (Result<Item> result : results) {
                 Item item = result.get();
                 if (fileNames == null || fileNames.isEmpty() || fileNames.contains(getFileNameFromPath(item.objectName()))) {
-                    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                    client.getObject(GetObjectArgs.builder().bucket(getBucketName(bucketName)).object(item.objectName()).build());
-                    fileDataList.add(outputStream.toByteArray());
+                    try (InputStream inputStream = client.getObject(GetObjectArgs.builder()
+                            .bucket(getBucketName(bucketName))
+                            .object(item.objectName())
+                            .build())) {
+                        String fileName = item.objectName();
+                        //获取对应的策略处理器
+                        String fileExtension = getFileExtension(fileName);
+                        System.out.println("fileExtension："+fileExtension);
+                        FileHandler handler = fileHandlers.get(fileExtension.toLowerCase());
+                        if (handler != null) {
+                            //获取文件内部数据
+                            String fileData = handler.handleFile(inputStream);
+                            fileDataList.add(fileData);
+                        } else {
+                            // 未找到对应的处理策略
+                            logger.error("No handler found for file type: {}", fileExtension);
+                        }
+                    }
                 }
             }
         } catch (Exception e) {
             logger.error("minio getFileData Exception:{}", e);
         }
+
         return fileDataList;
     }
+
+
+
 
 
 }

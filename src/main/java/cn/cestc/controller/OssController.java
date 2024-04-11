@@ -20,8 +20,9 @@ public class OssController {
     @PostMapping("upload")
     public AjaxResult upload(@RequestParam("path") String path,
                              @RequestParam("file") MultipartFile file,
-                             @RequestParam("uid") String uid) {
+                             @RequestParam(required = false, name = "uid") String uid) {
         try {
+            System.out.println(file);
             minioTemplate.upLoadFile(path, file.getOriginalFilename(), file);
             return AjaxResult.success("上传成功");
         } catch (Exception e) {
@@ -34,8 +35,9 @@ public class OssController {
         return AjaxResult.success("获取成功",ossFileList);
     }
     @GetMapping("/fileData")
-    public List<byte[]> getFileData(@RequestParam String bucketName, @RequestParam String folderName, @RequestParam(required = false) List<String> fileNames) {
-        return minioTemplate.getFileData(bucketName, folderName, fileNames);
+    public AjaxResult getFileData(@RequestParam String folderName, @RequestParam(required = false) List<String> fileNames) {
+        List<String> fileData = minioTemplate.getFileData(folderName, fileNames);
+        return AjaxResult.success("获取成功",fileData);
     }
 
 }
