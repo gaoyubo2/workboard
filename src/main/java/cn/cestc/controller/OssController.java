@@ -22,6 +22,7 @@ public class OssController {
                              @RequestParam("file") MultipartFile file,
                              @RequestParam(required = false, name = "uid") String uid) {
         try {
+            System.out.println(file);
             minioTemplate.upLoadFile(path, file.getOriginalFilename(), file);
             return AjaxResult.success("上传成功");
         } catch (Exception e) {
