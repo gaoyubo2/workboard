@@ -56,7 +56,8 @@ public class MinioTemplate implements OssTemplate {
         fileHandlers.put("txt", new TextFileHandler());
         fileHandlers.put("docx",new WordFileHandler());
         fileHandlers.put("doc",new WordFileHandler());
-        fileHandlers.put("excel",new ExcelFileHandler());
+        fileHandlers.put("rtf",new WordFileHandler());
+//        fileHandlers.put("xlsx",new ExcelFileHandler());
         // 添加其他文件类型的处理策略
     }
 
@@ -152,14 +153,11 @@ public class MinioTemplate implements OssTemplate {
     @SneakyThrows
     public OssFile upLoadFile(String folderName, String fileName, MultipartFile file) {
         if (file == null || file.isEmpty()) {
-//            throw new RuntimeException("400", "文件不能为空");
-
             System.out.println("文件不能为空");
             throw new RuntimeException("文件不能为空");
         }
         // 文件大小
         if (file.getSize() > 5 * 1024 * 1024) {
-//            throw new RuntimeException("400", "文件大小不能超过5M");
             System.out.println("文件大小超过5M");
             throw new RuntimeException("文件大小超过5M");
         }
@@ -473,6 +471,8 @@ public class MinioTemplate implements OssTemplate {
 
             for (Result<Item> result : results) {
                 Item item = result.get();
+                if(item.isDir()) continue;
+                //只读取输入文件 或 不输入文件名则全读取
                 if (fileNames == null || fileNames.isEmpty() || fileNames.contains(getFileNameFromPath(item.objectName()))) {
                     try (InputStream inputStream = client.getObject(GetObjectArgs.builder()
                             .bucket(getBucketName(bucketName))
@@ -481,15 +481,11 @@ public class MinioTemplate implements OssTemplate {
                         String fileName = item.objectName();
                         //获取对应的策略处理器
                         String fileExtension = getFileExtension(fileName);
-                        System.out.println("fileExtension："+fileExtension);
                         FileHandler handler = fileHandlers.get(fileExtension.toLowerCase());
-                        if (handler != null) {
-                            //获取文件内部数据
+                        if (handler != null) {//有对应策略则读取数据
+                            //读取文件内部数据
                             String fileData = handler.handleFile(inputStream);
                             fileDataList.add(fileData);
-                        } else {
-                            // 未找到对应的处理策略
-                            logger.error("No handler found for file type: {}", fileExtension);
                         }
                     }
                 }
