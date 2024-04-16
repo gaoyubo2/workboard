@@ -24,7 +24,7 @@ oss:
   secretKey: minio_secret_key
   bucketName: iris
   endpoint: http://10.32.76.16:9000
-  fileExt: txt,doc,docx,rtf,xlsx
+  fileExt: txt,doc,docx,rtf,xlsx,csv
 
 
 

@@ -16,12 +16,10 @@ public class EventServiceImpl extends ServiceImpl<EventMapper,Event> implements 
     @Override
     public List<Event> pagePlus(Integer current, String key) {
         if(current == 1){
-            List<Event> res = eventMapper.pagePlus(7, key);
-            return res;
+            return eventMapper.pagePlus(7, key);
         }
         else{
-            List<Event> res = eventMapper.pagePlus2(12,7+(current-2)*12, key);
-            return res;
+            return eventMapper.pagePlus2(12,7+(current-2)*12, key);
         }
     }
 }

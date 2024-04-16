@@ -21,7 +21,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName(value = "event_role")
-public class EventRole{
+public class EventRole implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
     private Integer id;

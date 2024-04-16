@@ -1,24 +1,27 @@
 package cn.cestc.controller;
-
-import cn.cestc.domain.dto.UploadFileDTO;
+import cn.cestc.domain.Oss;
 import cn.cestc.domain.vo.OssFile;
-import cn.cestc.service.IOssService;
 import cn.cestc.template.OssTemplate;
-import cn.hutool.core.net.multipart.UploadFile;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.web.multipart.MultipartFile;
 import xin.altitude.cms.common.entity.AjaxResult;
-
+import cn.cestc.mapper.OssMapper;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import xin.altitude.cms.common.entity.PageEntity;
+import io.swagger.annotations.ApiOperation;
+import cn.cestc.service.IOssService;
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/oss")
-public class OssController {
-
-    private final OssTemplate minioTemplate;
+@RequiredArgsConstructor
+public class OssController{
     private final IOssService ossService;
+    private final OssTemplate minioTemplate;
 
 
     @PostMapping("upload")
@@ -39,5 +42,28 @@ public class OssController {
         List<String> fileData = minioTemplate.getFileData(filePath, fileNames);
         return AjaxResult.success("获取成功",fileData);
     }
-
+    @GetMapping("/page")
+    public AjaxResult page(PageEntity pageEntity,Oss oss){
+        return AjaxResult.success(ossService.page(pageEntity.toPage(), Wrappers.lambdaQuery(oss)));
+    }
+    @GetMapping("/list")
+    public AjaxResult list(Oss oss){
+        return AjaxResult.success(ossService.list(Wrappers.lambdaQuery(oss)));
+    }
+    @PostMapping("/push")
+    public AjaxResult add(@RequestBody Oss oss) {
+        return AjaxResult.success(ossService.save(oss));
+    }
+    @PutMapping("/edit")
+    public AjaxResult edit(@RequestBody Oss oss) {
+        return AjaxResult.success(ossService.updateById(oss));
+    }
+    @DeleteMapping("/delete/{ids}")
+    public AjaxResult delete(@PathVariable Integer[] ids) {
+        return AjaxResult.success(ossService.removeByIds(Arrays.asList(ids)));
+    }
+    @GetMapping(value = "/detail/{id}")
+    public AjaxResult detail(@PathVariable("id") Integer id) {
+        return AjaxResult.success(ossService.getById(id));
+    }
 }
