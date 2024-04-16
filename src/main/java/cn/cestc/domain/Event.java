@@ -35,7 +35,8 @@ public class Event{
     private Integer updaterId;
     @ApiModelProperty(value = "备注信息", position = 7)
     private String remarks;
-    
+    @ApiModelProperty(value = "案件类型", position = 8)
+    private String eventRole;
     public Event(Event event) {
         if (Objects.nonNull(event)) {
             this.id=event.id;
@@ -45,6 +46,7 @@ public class Event{
             this.updateTime=event.updateTime;
             this.updaterId=event.updaterId;
             this.remarks=event.remarks;
+            this.eventRole=event.eventRole;
         }
     }
 }
