@@ -10,7 +10,6 @@ import java.io.InputStream;
 public class WordFileHandler implements FileHandler {
     @Override
     public String handleFile(InputStream inputStream) throws IOException {
-        System.out.println("处理了word");
         XWPFDocument doc = new XWPFDocument(inputStream);
         XWPFWordExtractor extractor = new XWPFWordExtractor(doc);
         return extractor.getText();

@@ -75,14 +75,14 @@ public interface OssTemplate {
      */
     void downloadFile(HttpServletResponse response, String fileName, String filePath);
 
-    List<OssFile> getOssFilesInFolder(String folderName);
+    List<OssFile> getOssFilesInFolder(String filePath);
 
     /**
      * 获取文件内部数据
      *
-     * @param folderName 目录名称
+     * @param filePath 目录名称
      * @param fileNames  文件名列表，如果为null或空，则获取所有文件的内部数据
      * @return List<byte[]> 文件内部数据列表
      */
-    List<String> getFileData(String folderName, List<String> fileNames);
+    List<String> getFileData(String filePath, List<String> fileNames);
 }
