@@ -1,21 +1,18 @@
 package cn.cestc.controller;
+
 import cn.cestc.domain.Oss;
 import cn.cestc.domain.vo.OssFile;
+import cn.cestc.service.IOssService;
 import cn.cestc.template.OssTemplate;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.web.multipart.MultipartFile;
 import xin.altitude.cms.common.entity.AjaxResult;
-import cn.cestc.mapper.OssMapper;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import xin.altitude.cms.common.entity.PageEntity;
-import io.swagger.annotations.ApiOperation;
-import cn.cestc.service.IOssService;
+
+import java.util.Arrays;
+import java.util.List;
 @RestController
 @RequestMapping("/oss")
 @RequiredArgsConstructor

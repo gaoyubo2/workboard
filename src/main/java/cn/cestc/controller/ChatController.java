@@ -1,22 +1,14 @@
 package cn.cestc.controller;
-import cn.cestc.mapper.ChatMapper;
-import org.springframework.web.bind.annotation.RequestMapping;
-import java.util.Arrays;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import xin.altitude.cms.common.entity.AjaxResult;
-import cn.cestc.service.IChatService;
-import java.util.List;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import xin.altitude.cms.common.entity.PageEntity;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.DeleteMapping;
+
 import cn.cestc.domain.Chat;
-import org.springframework.web.bind.annotation.GetMapping;
+import cn.cestc.service.IChatService;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import xin.altitude.cms.common.entity.AjaxResult;
+import xin.altitude.cms.common.entity.PageEntity;
+
+import java.util.Arrays;
 @RestController
 @RequestMapping("/chat")
 public class ChatController{

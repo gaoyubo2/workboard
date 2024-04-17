@@ -1,20 +1,18 @@
 package cn.cestc.service.impl;
+
 import cn.cestc.domain.MinioProperties;
 import cn.cestc.domain.Oss;
-import cn.cestc.domain.dto.UploadFileDTO;
 import cn.cestc.domain.vo.UserInfoVO;
 import cn.cestc.mapper.OssMapper;
 import cn.cestc.service.IOssService;
 import cn.cestc.service.SsoService;
 import cn.cestc.template.OssTemplate;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import java.io.File;
 
 @Service
 @RequiredArgsConstructor

@@ -3,7 +3,6 @@ package cn.cestc.config;
 import cn.cestc.domain.MinioProperties;
 import io.minio.MinioClient;
 import lombok.SneakyThrows;
-// 修改为自己项目的类路径
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

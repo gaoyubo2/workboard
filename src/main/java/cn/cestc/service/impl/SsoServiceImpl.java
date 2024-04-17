@@ -4,12 +4,11 @@ import cn.cestc.domain.vo.UserInfoVO;
 import cn.cestc.service.SsoService;
 import cn.cestc.util.RestTemplateUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 
 @RequiredArgsConstructor
