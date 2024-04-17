@@ -31,6 +31,8 @@ public class Oss implements Serializable {
     private String bucket;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
+    private Integer roleId;
+    private String roleName;
     
     public Oss(Oss oss) {
         if (Objects.nonNull(oss)) {
@@ -40,6 +42,8 @@ public class Oss implements Serializable {
             this.filename=oss.filename;
             this.bucket=oss.bucket;
             this.createTime=oss.createTime;
+            this.roleId=oss.roleId;
+            this.roleName=oss.roleName;
         }
     }
 }

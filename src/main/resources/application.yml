@@ -25,6 +25,8 @@ oss:
   bucketName: iris
   endpoint: http://10.32.76.16:9000
   fileExt: txt,doc,docx,rtf,xlsx,csv
+sso:
+  getUserById: http://10.56.183.138:8889/userWithRole
 
 
 

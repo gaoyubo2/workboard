@@ -153,12 +153,10 @@ public class MinioTemplate implements OssTemplate {
     @SneakyThrows
     public OssFile upLoadFile(String folderName, String fileName, MultipartFile file) {
         if (file == null || file.isEmpty()) {
-            System.out.println("文件不能为空");
             throw new RuntimeException("文件不能为空");
         }
         // 文件大小
         if (file.getSize() > 5 * 1024 * 1024) {
-            System.out.println("文件大小超过5M");
             throw new RuntimeException("文件大小超过5M");
         }
         String suffix = getFileExtension(file.getOriginalFilename());
@@ -221,13 +219,6 @@ public class MinioTemplate implements OssTemplate {
     @SneakyThrows
     public OssFile upLoadFile(String bucketName, String folderName, String fileName, String suffix, InputStream stream,
                               String contentType) {
-        System.out.println(bucketName);
-        System.out.println(folderName);
-        System.out.println(fileName);
-        System.out.println(suffix);
-        System.out.println(stream);
-        System.out.println(contentType);
-
         if (!bucketExists(bucketName)) {
             logger.info("minio bucketName is not creat");
             makeBucket(bucketName);
