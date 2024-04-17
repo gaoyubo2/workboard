@@ -26,13 +26,13 @@ public class OssServiceImpl extends ServiceImpl<OssMapper, Oss> implements IOssS
     /**
      * 插入数据库uploadFileDTO
      */
-    private boolean insertUploadInfo(String filePath, Integer uid, String fileName,Integer roleId, String roleName) {
-        Oss oss = getOss(filePath, uid, fileName, roleId, roleName);
+    private boolean insertUploadInfo(String filePath, Integer uid, String fileName, Integer roleId, String roleName, String extra) {
+        Oss oss = getOss(filePath, uid, fileName, roleId, roleName,extra);
         int cnt = baseMapper.insert(oss);
         return cnt > 0;
     }
 
-    private Oss getOss(String filePath, Integer uid, String fileName, Integer roleId, String roleName) {
+    private Oss getOss(String filePath, Integer uid, String fileName, Integer roleId, String roleName, String extra) {
         Oss oss = new Oss();
         oss.setBucket(ossProperties.getBucketName());
         oss.setUid(uid);
@@ -40,18 +40,18 @@ public class OssServiceImpl extends ServiceImpl<OssMapper, Oss> implements IOssS
         oss.setFilename(fileName);
         oss.setRoleId(roleId);
         oss.setRoleName(roleName);
+        oss.setExtra(extra);
         return oss;
     }
 
     @Override
-    public boolean uploadFile(MultipartFile file, Integer uid, String filePath) {
+    public boolean uploadFile(MultipartFile file, Integer uid, String filePath, String extra) {
         String fileName = file.getOriginalFilename();
         //上传到minio
         minioTemplate.upLoadFile(filePath, fileName, file);
         //获取用户角色信息
         UserInfoVO userInfoWithRole = ssoService.getUserInfoById(uid);
-        System.out.println(userInfoWithRole);
         //同步更新数据库
-        return insertUploadInfo(filePath, uid, fileName,userInfoWithRole.getRoleId(),userInfoWithRole.getRoleName());
+        return insertUploadInfo(filePath, uid, fileName,userInfoWithRole.getRoleId(),userInfoWithRole.getRoleName(),extra);
     }
 }

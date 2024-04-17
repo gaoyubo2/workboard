@@ -24,8 +24,9 @@ public class OssController{
     @PostMapping("upload")
     public AjaxResult upload(@RequestParam("file") MultipartFile file,
                              @RequestParam(required = false, name ="uid") Integer uid,
-                             @RequestParam("filePath") String filePath) {
-        boolean flag = ossService.uploadFile(file,uid,filePath);
+                             @RequestParam("filePath") String filePath,
+                             @RequestParam(required = false,value = "extra") String extra) {
+        boolean flag = ossService.uploadFile(file,uid,filePath,extra);
         return flag ? AjaxResult.success() : AjaxResult.error("上传失败");
     }
     @GetMapping("getFilesByProject")

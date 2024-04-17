@@ -33,6 +33,7 @@ public class Oss implements Serializable {
     private LocalDateTime createTime;
     private Integer roleId;
     private String roleName;
+    private String extra;
     
     public Oss(Oss oss) {
         if (Objects.nonNull(oss)) {
@@ -44,6 +45,7 @@ public class Oss implements Serializable {
             this.createTime=oss.createTime;
             this.roleId=oss.roleId;
             this.roleName=oss.roleName;
+            this.extra=oss.extra;
         }
     }
 }
