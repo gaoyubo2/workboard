@@ -1,6 +1,6 @@
 package cn.cestc.service.impl;
 
-import cn.cestc.domain.MinioProperties;
+import cn.cestc.domain.property.OssProperties;
 import cn.cestc.domain.Oss;
 import cn.cestc.domain.vo.UserInfoVO;
 import cn.cestc.mapper.OssMapper;
@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 @RequiredArgsConstructor
 public class OssServiceImpl extends ServiceImpl<OssMapper, Oss> implements IOssService {
     @Resource
-    private MinioProperties ossProperties;
+    private OssProperties ossProperties;
 
     private final OssTemplate minioTemplate;
     private final SsoService ssoService;

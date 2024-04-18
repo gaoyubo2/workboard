@@ -3,7 +3,7 @@ package cn.cestc.controller;
 import cn.cestc.domain.EventRole;
 import cn.cestc.service.IEventRoleService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
@@ -11,9 +11,9 @@ import xin.altitude.cms.common.entity.PageEntity;
 import java.util.Arrays;
 @RestController
 @RequestMapping("/cestc/event/role")
+@RequiredArgsConstructor
 public class EventRoleController{
-    @Autowired
-    private IEventRoleService eventRoleService;
+    private final IEventRoleService eventRoleService;
     @GetMapping("/page")
     public AjaxResult page(PageEntity pageEntity,EventRole eventRole){
         return AjaxResult.success(eventRoleService.page(pageEntity.toPage(), Wrappers.lambdaQuery(eventRole)));

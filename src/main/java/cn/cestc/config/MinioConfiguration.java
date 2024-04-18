@@ -1,6 +1,6 @@
 package cn.cestc.config;
 
-import cn.cestc.domain.MinioProperties;
+import cn.cestc.domain.property.OssProperties;
 import io.minio.MinioClient;
 import lombok.SneakyThrows;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -16,12 +16,12 @@ import javax.annotation.Resource;
  * @author gyb
  */
 @Configuration
-@EnableConfigurationProperties(MinioProperties.class)
+@EnableConfigurationProperties(OssProperties.class)
 @ConditionalOnProperty(value = "oss.name", havingValue = "minio")
 public class MinioConfiguration {
 
     @Resource
-    private MinioProperties ossProperties;
+    private OssProperties ossProperties;
 
     @Bean
     @SneakyThrows

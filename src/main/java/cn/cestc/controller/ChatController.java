@@ -3,7 +3,7 @@ package cn.cestc.controller;
 import cn.cestc.domain.Chat;
 import cn.cestc.service.IChatService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
@@ -11,9 +11,9 @@ import xin.altitude.cms.common.entity.PageEntity;
 import java.util.Arrays;
 @RestController
 @RequestMapping("/chat")
+@RequiredArgsConstructor
 public class ChatController{
-    @Autowired
-    private IChatService chatService;
+    private final IChatService chatService;
     @GetMapping("/page")
     public AjaxResult page(PageEntity pageEntity,Chat chat){
         return AjaxResult.success(chatService.page(pageEntity.toPage(), Wrappers.lambdaQuery(chat)));

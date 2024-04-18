@@ -1,6 +1,6 @@
 package cn.cestc.template.impl;
 
-import cn.cestc.domain.MinioProperties;
+import cn.cestc.domain.property.OssProperties;
 import cn.cestc.domain.vo.OssFile;
 import cn.cestc.handler.FileHandler;
 import cn.cestc.handler.impl.TextFileHandler;
@@ -23,7 +23,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -70,7 +69,7 @@ public class MinioTemplate implements OssTemplate {
      * 配置类
      */
     @Resource
-    private MinioProperties ossProperties;
+    private OssProperties ossProperties;
 
     /**
      * 格式化时间
@@ -151,7 +150,7 @@ public class MinioTemplate implements OssTemplate {
     @Override
     @SneakyThrows
     public OssFile upLoadFile(String folderName, String fileName, MultipartFile file) {
-        if (file == null || file.isEmpty()) {
+        if (file == null) {
             throw new RuntimeException("文件不能为空");
         }
         // 文件大小
@@ -486,9 +485,4 @@ public class MinioTemplate implements OssTemplate {
 
         return fileDataList;
     }
-
-
-
-
-
 }

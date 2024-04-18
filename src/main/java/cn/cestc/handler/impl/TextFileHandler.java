@@ -19,4 +19,3 @@ public class TextFileHandler implements FileHandler {
     }
 }
 
-// WordFileHandler 和 ExcelFileHandler 等类似

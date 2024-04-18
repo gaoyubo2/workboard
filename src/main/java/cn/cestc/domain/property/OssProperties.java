@@ -1,4 +1,4 @@
-package cn.cestc.domain;
+package cn.cestc.domain.property;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -11,8 +11,8 @@ import java.util.List;
  * @author gyb
  */
 @Data
-@ConfigurationProperties(prefix = MinioProperties.PREFIX)
-public class MinioProperties {
+@ConfigurationProperties(prefix = OssProperties.PREFIX)
+public class OssProperties {
 
     /**
      * 配置前缀
