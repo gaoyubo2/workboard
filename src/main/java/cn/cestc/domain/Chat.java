@@ -9,13 +9,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName(value = "chat")
-public class Chat{
+public class Chat implements Serializable {
     private static final long serialVersionUID = 1L;
     @TableId(type = IdType.AUTO)
     @ApiModelProperty(value = "主键", position = 1)

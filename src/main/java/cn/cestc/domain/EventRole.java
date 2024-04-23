@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Objects;
 @Data
 @NoArgsConstructor
@@ -25,6 +26,7 @@ public class EventRole implements Serializable {
         if (Objects.nonNull(eventRole)) {
             this.id=eventRole.id;
             this.name=eventRole.name;
+
         }
     }
 }

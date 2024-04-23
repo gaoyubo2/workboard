@@ -39,4 +39,13 @@ cestc:
       methods:
         user: user
 
+# 在线编辑板 请求url
+template:
+  apikey: apikey=04ef14e92789152399d8d9de2603ef4eb62d4766d3655abb99244b203fb77d23
+
+  createDoc: http://10.56.181.180:9097/api/1/createPad?
+  saveDoc: http://10.56.181.180:9097/api/1/setText?
+
+  docUrl: http://10.56.181.180:9097/p/
+
 

@@ -66,7 +66,7 @@ public class EventController{
 //            queryWrapper.like(Event::getEventRole, event.getEventRole());
 //        }
         // 调用 service 的 list 方法并返回结果
-        List<Event> list = eventService.list(queryWrapper);
+        //List<Event> list = eventService.list(queryWrapper);
         return AjaxResult.success(eventService.list(queryWrapper));
     }
     @PostMapping("/push")
