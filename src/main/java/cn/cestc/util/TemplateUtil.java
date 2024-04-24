@@ -37,7 +37,6 @@ public class TemplateUtil {
         String forObject = restTemplateUtil.get(createPad,String.class, map);
         if (forObject != null && forObject.contains("ok")) {
             docUrl.setResUrl(DOCURL+padID);
-            System.out.println(docUrl.getResUrl());
             return docUrl;
         }
         return null;

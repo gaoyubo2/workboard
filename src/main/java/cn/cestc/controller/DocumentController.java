@@ -6,12 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Arrays;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import xin.altitude.cms.common.entity.AjaxResult;
-import cn.cestc.mapper.DocumentMapper;
-import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import xin.altitude.cms.common.entity.PageEntity;
-import io.swagger.annotations.ApiOperation;
 import cn.cestc.domain.Document;
 @RestController
 @RequestMapping("/document")

@@ -497,3 +497,17 @@
 17:01:19.582 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
 17:02:23.025 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
 17:02:23.029 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:02:28.429 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 134548 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+17:02:28.433 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:02:29.401 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+17:02:29.401 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:02:29.401 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+17:02:29.463 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:02:31.459 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+17:02:31.527 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:02:31.977 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+17:02:32.257 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.102 seconds (JVM running for 5.056)
+17:02:39.874 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:02:40.118 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:10:04.337 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:10:04.339 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed

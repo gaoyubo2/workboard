@@ -84,6 +84,11 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper,Template> im
                 .padid(padID)
                 .build();
 
+        Document ifExist = documentMapper.selectOne(new QueryWrapper<Document>().eq("name", name));
+        if(ifExist != null){
+            throw new RuntimeException("文档重名，请重试");
+        }
+        //插入
         documentMapper.insert(document);
         return docUrl;
     }

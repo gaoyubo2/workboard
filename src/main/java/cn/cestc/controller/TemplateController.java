@@ -3,11 +3,8 @@ package cn.cestc.controller;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
 import cn.cestc.util.TemplateUtil;
-import cn.hutool.core.annotation.Link;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

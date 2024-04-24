@@ -60,6 +60,6 @@ template:
   deleteDoc: http://10.56.181.180:9097/api/1/deletePad?         # 删除文档
   getDoc: http://10.56.181.180:9097/api/1/getText?              # 获取文档内容
 
-  docUrl: http://10.56.181.180:9097/p/                          # 文档访问url
+  docUrl: /p/                          # 文档访问url
 
 
