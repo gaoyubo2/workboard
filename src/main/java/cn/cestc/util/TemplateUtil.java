@@ -1,23 +1,21 @@
 package cn.cestc.util;
 
+import cn.cestc.constant.TemplateUrl;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
 import cn.hutool.json.JSONObject;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import lombok.RequiredArgsConstructor;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Component
-@RequiredArgsConstructor
 public class TemplateUtil {
     @Value("${template.createDoc}")
     private String CREATEDOC;
@@ -35,14 +33,25 @@ public class TemplateUtil {
     private String GETDOC;
 
     private final RestTemplate restTemplate;
+    private final RestTemplateUtil restTemplateUtil;
+    private final UrlBuilder urlUtil;
+
+    @Autowired
+    public TemplateUtil(RestTemplate restTemplate, RestTemplateUtil restTemplateUtil, @Qualifier("templateUrlBuilderUtil") UrlBuilder urlUtil) {
+        this.restTemplate = restTemplate;
+        this.restTemplateUtil = restTemplateUtil;
+        this.urlUtil = urlUtil;
+    }
 
     public DocUrl createPad(String padID, String content) {
         DocUrl docUrl = new DocUrl();
-        String url = CREATEDOC + APIKEY + "&padID=" + padID + "&text=" + content ;
-        String forObject = restTemplate.getForObject(url, String.class);
+        Map<String,String> map = new HashMap<>();
+        map.put("padID", padID);
+        map.put("text", content);
+        String createPad = urlUtil.buildApiUrl("template", TemplateUrl.CREATE_DOC.getMethodName());
+        String forObject = restTemplateUtil.get(createPad,String.class, map);
         if (forObject != null && forObject.contains("ok")) {
             docUrl.setResUrl(DOCURL+padID);
-            //docUrl.setIframe(IFRAMEPRE+padID+IFRAMEAFR);
             return docUrl;
         }
         return null;

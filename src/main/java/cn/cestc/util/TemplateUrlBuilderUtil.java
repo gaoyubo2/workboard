@@ -6,14 +6,13 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 @Component
 @RequiredArgsConstructor
-public class UrlBuilderUtil {
-
+public class TemplateUrlBuilderUtil implements UrlBuilder {
     private final ServiceProperties serviceProperties;
     private final Map<String, String> cachedUrls = new ConcurrentHashMap<>();
 
+    @Override
     public String buildApiUrl(String serviceName, String methodName) {
         String cacheKey = serviceName + "_" + methodName;
         if (cachedUrls.containsKey(cacheKey)) {
@@ -22,7 +21,7 @@ public class UrlBuilderUtil {
 
         ServiceProperties.ServiceConfig serviceConfig = getServiceConfig(serviceName);
         String methodPath = getMethodPath(serviceConfig, methodName);
-        String apiUrl = buildUrl(serviceConfig.getDomain(), serviceConfig.getPort(), methodPath);
+        String apiUrl = buildUrl(serviceConfig.getDomain(), serviceConfig.getPort(), methodPath,serviceConfig.getApikey());
 
         cachedUrls.put(cacheKey, apiUrl);
         return apiUrl;
@@ -44,8 +43,9 @@ public class UrlBuilderUtil {
         return methodPath;
     }
 
-    private String buildUrl(String domain, String port, String methodPath) {
-        return domain + ":" + port + "/" + methodPath;
+    @Override
+    public String buildUrl(String domain, String port, String methodPath,String apikey) {
+        return domain + ":" + port + "/" + methodPath + "?apikey="+apikey;
     }
-}
 
+}

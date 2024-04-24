@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.Map;
 
 @Component
@@ -14,16 +15,15 @@ public class RestTemplateUtil {
 
     private final RestTemplate restTemplate;
 
-    public <T> T get(String url, Class<T> responseType, Map<String, Object> params) {
+    public <T> T get(String url, Class<T> responseType, Map<String, String> params) {
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url);
         if (params != null && !params.isEmpty()) {
-            for (Map.Entry<String, Object> entry : params.entrySet()) {
+            for (Map.Entry<String, String> entry : params.entrySet()) {
                 builder.queryParam(entry.getKey(), entry.getValue());
             }
         }
-
-        ResponseEntity<T> responseEntity = restTemplate.getForEntity(builder.toUriString(), responseType);
-        return responseEntity.getBody();
+        URI uri = builder.build().toUri();
+        return restTemplate.getForObject(uri, responseType);
     }
 
     public <T, R> T post(String url, R requestBody, Class<T> responseType) {

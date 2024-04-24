@@ -22,5 +22,6 @@ public class ServiceProperties {
         private String domain;
         private String port;
         private Map<String, String> methods;
+        private String apikey;
     }
 }

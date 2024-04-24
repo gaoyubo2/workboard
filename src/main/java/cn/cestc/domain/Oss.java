@@ -34,6 +34,7 @@ public class Oss implements Serializable {
     private Integer roleId;
     private String roleName;
     private String extra;
+    private String username;
     
     public Oss(Oss oss) {
         if (Objects.nonNull(oss)) {
@@ -46,6 +47,7 @@ public class Oss implements Serializable {
             this.roleId=oss.roleId;
             this.roleName=oss.roleName;
             this.extra=oss.extra;
+            this.username=oss.username;
         }
     }
 }

@@ -11,7 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
 
-import java.util.Arrays;
 import java.util.List;
 @RestController
 @RequestMapping("/oss")
@@ -58,7 +57,8 @@ public class OssController{
     }
     @DeleteMapping("/delete/{ids}")
     public AjaxResult delete(@PathVariable Integer[] ids) {
-        return AjaxResult.success(ossService.removeByIds(Arrays.asList(ids)));
+        boolean flag = ossService.removeFilesByIds(ids);
+        return flag?AjaxResult.success():AjaxResult.error();
     }
     @GetMapping(value = "/detail/{id}")
     public AjaxResult detail(@PathVariable("id") Integer id) {

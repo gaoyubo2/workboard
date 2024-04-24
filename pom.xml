@@ -8,11 +8,11 @@
         <version>2.5.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <groupId>cn.cestc</groupId>
     <artifactId>workboard</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>demo3</name>
-    <description>demo3</description>
+    <version>1.0</version>
+    <name>workboard</name>
+    <description>workboard</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -76,6 +76,12 @@
             <artifactId>poi-ooxml</artifactId>
             <version>4.1.2</version>
         </dependency>
+<!--        logback-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.12</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -91,11 +97,34 @@
 
     </dependencies>
 
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <image>-->
+<!--                        <builder>paketobuildpacks/builder-jammy-base:latest</builder>-->
+<!--                    </image>-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source> <!--指明源码用的Jdk版本-->
+                    <target>${java.version}</target> <!--指明打包后的Jdk版本-->
+                </configuration>
             </plugin>
         </plugins>
     </build>
