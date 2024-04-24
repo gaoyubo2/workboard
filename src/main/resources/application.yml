@@ -27,6 +27,7 @@ oss:
   fileExt: txt,doc,docx,rtf,xlsx,csv
 
 cestc:
+
   services:
     sso:
       domain: http://10.56.181.180
