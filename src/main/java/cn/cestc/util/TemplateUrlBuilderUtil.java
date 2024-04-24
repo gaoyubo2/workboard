@@ -1,5 +1,6 @@
 package cn.cestc.util;
 
+import cn.cestc.constant.TemplateUrl;
 import cn.cestc.domain.property.ServiceProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -45,6 +46,9 @@ public class TemplateUrlBuilderUtil implements UrlBuilder {
 
     @Override
     public String buildUrl(String domain, String port, String methodPath,String apikey) {
+        if(methodPath.equals(TemplateUrl.DOC_URL.getMethodName())){
+            return domain + ":" + port + "/" + methodPath;
+        }
         return domain + ":" + port + "/" + methodPath + "?apikey="+apikey;
     }
 

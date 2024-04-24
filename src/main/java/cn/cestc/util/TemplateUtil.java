@@ -17,28 +17,13 @@ import java.util.*;
 
 @Component
 public class TemplateUtil {
-    @Value("${template.createDoc}")
-    private String CREATEDOC;
-    @Value("${template.saveDoc}")
-    private String SAVEDOC;
-    @Value("${template.apikey}")
-    private String APIKEY;
     @Value("${template.docUrl}")
     private String DOCURL;
-    @Value("${template.getChar}")
-    private String GETCHARS;
-    @Value("${template.deleteDoc}")
-    private String DELETEPAD;
-    @Value("${template.getDoc}")
-    private String GETDOC;
-
-    private final RestTemplate restTemplate;
     private final RestTemplateUtil restTemplateUtil;
     private final UrlBuilder urlUtil;
 
     @Autowired
-    public TemplateUtil(RestTemplate restTemplate, RestTemplateUtil restTemplateUtil, @Qualifier("templateUrlBuilderUtil") UrlBuilder urlUtil) {
-        this.restTemplate = restTemplate;
+    public TemplateUtil(RestTemplateUtil restTemplateUtil, @Qualifier("templateUrlBuilderUtil") UrlBuilder urlUtil) {
         this.restTemplateUtil = restTemplateUtil;
         this.urlUtil = urlUtil;
     }
@@ -52,23 +37,26 @@ public class TemplateUtil {
         String forObject = restTemplateUtil.get(createPad,String.class, map);
         if (forObject != null && forObject.contains("ok")) {
             docUrl.setResUrl(DOCURL+padID);
+            System.out.println(docUrl.getResUrl());
             return docUrl;
         }
         return null;
     }
 
     public boolean savePad(String padID, String content) {
-        String url = SAVEDOC + APIKEY + "&padID=" + padID + "&text=" + content;
-        String forObject = restTemplate.getForObject(url, String.class);
-        String test = "ok";
-        return forObject != null && forObject.contains(test);
+        Map<String,String> map = new HashMap<>();
+        map.put("padID", padID);
+        map.put("text", content);
+        String saveDoc = urlUtil.buildApiUrl("template", TemplateUrl.SAVE_DOC.getMethodName());
+        String forObject = restTemplateUtil.get(saveDoc,String.class, map);
+        return forObject != null && forObject.contains("ok");
     }
 
     public List<CharsHistory> getChar(String padID) {
-        String url = GETCHARS + APIKEY + "&padID=" + padID;
-        String forObject = restTemplate.getForObject(url, String.class);
-        System.out.println(forObject);
-
+        Map<String,String> map = new HashMap<>();
+        map.put("padID", padID);
+        String getChar = urlUtil.buildApiUrl("template", TemplateUrl.GET_CHAR.getMethodName());
+        String forObject = restTemplateUtil.get(getChar,String.class, map);
         // 使用 Gson 解析 JSON 字符串
         Gson gson = new Gson();
         JsonObject jsonObject = gson.fromJson(forObject, JsonObject.class);
@@ -94,17 +82,20 @@ public class TemplateUtil {
     }
 
     public boolean deletePad(String padID) {
-        String url = DELETEPAD + APIKEY + "&padID=" + padID;
-        String forObject = restTemplate.getForObject(url, String.class);
-        String test = "ok";
-        return forObject != null && forObject.contains(test);
+        Map<String,String> map = new HashMap<>();
+        map.put("padID", padID);
+        String deletePad = urlUtil.buildApiUrl("template", TemplateUrl.DELETE_DOC.getMethodName());
+        String forObject = restTemplateUtil.get(deletePad,String.class, map);
+
+        return forObject != null && forObject.contains("ok");
     }
 
     public String getPad(String padID) {
-        String url = GETDOC + APIKEY + "&padID=" + padID;
-        String forObject = restTemplate.getForObject(url, String.class);
-        String test = "ok";
-        if (forObject != null && forObject.contains(test)) {
+        Map<String,String> map = new HashMap<>();
+        map.put("padID", padID);
+        String getPad = urlUtil.buildApiUrl("template", TemplateUrl.GET_DOC.getMethodName());
+        String forObject = restTemplateUtil.get(getPad,String.class, map);
+        if (forObject != null && forObject.contains("ok")) {
             // 解析 JSON 字符串
             JSONObject jsonObject = new JSONObject(forObject);
             // 提取 data 字段的值到一个 String 变量
@@ -113,4 +104,6 @@ public class TemplateUtil {
         }
         return null;
     }
+
+
 }

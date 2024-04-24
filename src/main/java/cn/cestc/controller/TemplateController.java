@@ -19,6 +19,7 @@ import cn.cestc.domain.Template;
 @RestController
 @RequestMapping("/template")
 @RequiredArgsConstructor
+@CrossOrigin
 public class TemplateController{
     private final ITemplateService templateService;
     private final TemplateUtil templateUtil;
@@ -57,6 +58,14 @@ public class TemplateController{
     public AjaxResult createDocument(@RequestParam Integer id){
         DocUrl docUrl = templateService.createDoc(id);
         return docUrl == null ? AjaxResult.error("新建模板失败") : AjaxResult.success("新建模板成功",docUrl);
+    }
+
+    @GetMapping("/createDocWithName")
+    public AjaxResult createDocWithName(@RequestParam String name,
+                                        @RequestParam String content,
+                                        @RequestParam String author){
+        DocUrl docUrl = templateService.createWithName(name, content, author);
+        return docUrl == null ? AjaxResult.error("新建文件失败") : AjaxResult.success("新建文件成功",docUrl);
     }
 
     /**

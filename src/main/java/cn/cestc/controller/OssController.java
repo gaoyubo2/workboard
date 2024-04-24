@@ -15,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/oss")
 @RequiredArgsConstructor
+@CrossOrigin
 public class OssController{
     private final IOssService ossService;
     private final OssTemplate minioTemplate;

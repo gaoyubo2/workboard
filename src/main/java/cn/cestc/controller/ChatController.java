@@ -12,6 +12,7 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/chat")
 @RequiredArgsConstructor
+@CrossOrigin
 public class ChatController{
     private final IChatService chatService;
     @GetMapping("/page")

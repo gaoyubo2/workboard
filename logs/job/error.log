@@ -3,3 +3,7 @@
 12:47:41.705 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - null
 13:04:23.905 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - [createDoc] is not a valid HTTP URL
 13:05:53.037 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - [createDoc] is not a valid HTTP URL
+16:46:00.067 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+16:47:39.417 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+16:52:52.918 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+16:54:17.479 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]

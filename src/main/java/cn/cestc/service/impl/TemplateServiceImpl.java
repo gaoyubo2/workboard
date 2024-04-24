@@ -72,4 +72,19 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper,Template> im
                 .sorted(Comparator.comparingLong(history -> -Long.parseLong(history.getTime())))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public DocUrl createWithName(String name, String content, String author) {
+        String padID = RandomStringUtils.randomAlphanumeric(10);
+        DocUrl docUrl = templateUtil.createPad(padID, content);
+        Document document = Document
+                .builder()
+                .author(author)
+                .name(name)
+                .padid(padID)
+                .build();
+
+        documentMapper.insert(document);
+        return docUrl;
+    }
 }

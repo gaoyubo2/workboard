@@ -12,6 +12,7 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/cestc/event/role")
 @RequiredArgsConstructor
+@CrossOrigin
 public class EventRoleController{
     private final IEventRoleService eventRoleService;
     @GetMapping("/page")

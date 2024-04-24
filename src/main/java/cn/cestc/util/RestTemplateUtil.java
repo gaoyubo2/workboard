@@ -23,6 +23,7 @@ public class RestTemplateUtil {
             }
         }
         URI uri = builder.build().toUri();
+        System.out.println(uri);
         return restTemplate.getForObject(uri, responseType);
     }
 
