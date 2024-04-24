@@ -1,9 +1,17 @@
 package cn.cestc.service;
 import cn.cestc.domain.Template;
+import cn.cestc.domain.vo.CharsHistory;
+import cn.cestc.domain.vo.DocUrl;
 import com.baomidou.mybatisplus.extension.service.IService;
 
-public interface ITemplateService extends IService<Template>{
-    String createDoc(Integer id);
+import java.util.List;
 
-    boolean saveDoc(String padID, String content, String padName);
+public interface ITemplateService extends IService<Template>{
+    DocUrl createDoc(Integer id);
+
+    boolean saveDoc(String padID, String content, String padName, String authors);
+
+    List<CharsHistory> getChar(String padID);
+
+    List<CharsHistory> getAllChar();
 }

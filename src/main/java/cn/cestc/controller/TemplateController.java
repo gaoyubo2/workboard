@@ -1,8 +1,16 @@
 package cn.cestc.controller;
 
+import cn.cestc.domain.vo.CharsHistory;
+import cn.cestc.domain.vo.DocUrl;
+import cn.cestc.util.TemplateUtil;
+import cn.hutool.core.annotation.Link;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import cn.cestc.service.ITemplateService;
 import xin.altitude.cms.common.entity.AjaxResult;
@@ -13,6 +21,8 @@ import cn.cestc.domain.Template;
 @RequiredArgsConstructor
 public class TemplateController{
     private final ITemplateService templateService;
+    private final TemplateUtil templateUtil;
+
     @GetMapping("/page")
     public AjaxResult page(PageEntity pageEntity,Template template){
         return AjaxResult.success(templateService.page(pageEntity.toPage(), Wrappers.lambdaQuery(template)));
@@ -45,7 +55,7 @@ public class TemplateController{
      */
     @GetMapping("/createDoc")
     public AjaxResult createDocument(@RequestParam Integer id){
-        String docUrl = templateService.createDoc(id);
+        DocUrl docUrl = templateService.createDoc(id);
         return docUrl == null ? AjaxResult.error("新建模板失败") : AjaxResult.success("新建模板成功",docUrl);
     }
 
@@ -58,8 +68,52 @@ public class TemplateController{
     @GetMapping("/saveDoc")
     public AjaxResult saveDocument(@RequestParam String padID,
                                    @RequestParam String content,
-                                   @RequestParam String padName){
-        boolean flag = templateService.saveDoc(padID, content, padName);
+                                   @RequestParam String padName,
+                                   @RequestParam(required = false) String authors){
+        boolean flag = templateService.saveDoc(padID, content, padName, authors);
         return flag ? AjaxResult.success() : AjaxResult.error("保存文档失败");
+    }
+
+    /**
+     * 获取历史聊天记录 - 单个文档
+     * @param padID 文档id
+     * @return  历史聊天记录
+     */
+    @GetMapping("/getChars")
+    public AjaxResult getChars(@RequestParam String padID){
+        List<CharsHistory> res = templateService.getChar(padID);
+        return AjaxResult.success(res);
+    }
+
+    /**
+     * 获取所有存储文档的聊天记录，并按时间顺序返回
+     * @return 时间顺序的聊天记录
+     */
+    @GetMapping("/getAllChars")
+    public AjaxResult getAllChars(){
+        List<CharsHistory> res = templateService.getAllChar();
+        return AjaxResult.success(res);
+    }
+
+    /**
+     * 删除文档
+     * @param padID 文档id
+     * @return 封装结果
+     */
+    @GetMapping("/deletePad")
+    public AjaxResult deletePad(@RequestParam String padID){
+        boolean flag = templateUtil.deletePad(padID);
+        return flag ? AjaxResult.success() : AjaxResult.error("删除文档失败");
+    }
+
+    /**
+     * 获取文档内容
+     * @param padID 文档id
+     * @return 封装内容
+     */
+    @GetMapping("/getPad")
+    public AjaxResult getPad(@RequestParam String padID){
+        String content = templateUtil.getPad(padID);
+        return AjaxResult.success(content);
     }
 }

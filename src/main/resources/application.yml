@@ -38,14 +38,27 @@ cestc:
       port: 8084
       methods:
         user: user
+    template:
+      domain: http://10.56.181.180
+      port: 9097
+      methods:
+        createDoc: api/1/createPad
+        saveDoc: api/1/setText
+        getChar: api/1.2.7/getChatHistory
+        deleteDoc: api/1/deletePad
+        getDoc: api/1/getText
+        docUrl: p
 
 # 在线编辑板 请求url
 template:
   apikey: apikey=04ef14e92789152399d8d9de2603ef4eb62d4766d3655abb99244b203fb77d23
 
-  createDoc: http://10.56.181.180:9097/api/1/createPad?
-  saveDoc: http://10.56.181.180:9097/api/1/setText?
+  createDoc: http://10.56.181.180:9097/api/1/createPad?         # 插入模板
+  saveDoc: http://10.56.181.180:9097/api/1/setText?             # 保存文件
+  getChar: http://10.56.181.180:9097/api/1.2.7/getChatHistory?  # 获取聊天记录
+  deleteDoc: http://10.56.181.180:9097/api/1/deletePad?         # 删除文档
+  getDoc: http://10.56.181.180:9097/api/1/getText?              # 获取文档内容
 
-  docUrl: http://10.56.181.180:9097/p/
+  docUrl: http://10.56.181.180:9097/p/                          # 文档访问url
 
 
