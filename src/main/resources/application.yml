@@ -52,13 +52,6 @@ cestc:
       apikey: 1aa1654245f6230c551b8314f39d10ffa0511a38774966b82a95fb99d5baf5ed
 # 在线编辑板 请求url
 template:
-  apikey: apikey=04ef14e92789152399d8d9de2603ef4eb62d4766d3655abb99244b203fb77d23
-
-  createDoc: http://10.56.181.180:9097/api/1/createPad?         # 插入模板
-  saveDoc: http://10.56.181.180:9097/api/1/setText?             # 保存文件
-  getChar: http://10.56.181.180:9097/api/1.2.7/getChatHistory?  # 获取聊天记录
-  deleteDoc: http://10.56.181.180:9097/api/1/deletePad?         # 删除文档
-  getDoc: http://10.56.181.180:9097/api/1/getText?              # 获取文档内容
 
   docUrl: /p/                          # 文档访问url
 
