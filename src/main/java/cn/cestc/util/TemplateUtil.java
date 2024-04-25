@@ -9,16 +9,12 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
 
 @Component
 public class TemplateUtil {
-    @Value("${template.docUrl}")
-    private String DOCURL;
     private final RestTemplateUtil restTemplateUtil;
     private final UrlBuilder urlUtil;
 
@@ -36,7 +32,7 @@ public class TemplateUtil {
         String createPad = urlUtil.buildApiUrl("template", TemplateUrl.CREATE_DOC.getMethodName());
         String forObject = restTemplateUtil.get(createPad,String.class, map);
         if (forObject != null && forObject.contains("ok")) {
-            docUrl.setResUrl(DOCURL+padID);
+            docUrl.setResUrl(urlUtil.buildApiUrl("template",TemplateUrl.DOC_URL.getMethodName())+padID);
             return docUrl;
         }
         return null;

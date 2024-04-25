@@ -19,11 +19,12 @@ public class TemplateUrlBuilderUtil implements UrlBuilder {
         if (cachedUrls.containsKey(cacheKey)) {
             return cachedUrls.get(cacheKey);
         }
-
         ServiceProperties.ServiceConfig serviceConfig = getServiceConfig(serviceName);
         String methodPath = getMethodPath(serviceConfig, methodName);
         String apiUrl = buildUrl(serviceConfig.getDomain(), serviceConfig.getPort(), methodPath,serviceConfig.getApikey());
-
+        if(methodName.equals(TemplateUrl.DOC_URL.getMethodName())) {
+            apiUrl = serviceConfig.getMethods().get(methodName);
+        }
         cachedUrls.put(cacheKey, apiUrl);
         return apiUrl;
     }
@@ -46,9 +47,7 @@ public class TemplateUrlBuilderUtil implements UrlBuilder {
 
     @Override
     public String buildUrl(String domain, String port, String methodPath,String apikey) {
-        if(methodPath.equals(TemplateUrl.DOC_URL.getMethodName())){
-            return domain + ":" + port + "/" + methodPath;
-        }
+        if(methodPath.equals("/p/")) return "/p/";
         return domain + ":" + port + "/" + methodPath + "?apikey="+apikey;
     }
 

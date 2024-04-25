@@ -48,11 +48,6 @@ cestc:
         getChar: api/1.2.7/getChatHistory
         deleteDoc: api/1/deletePad
         getDoc: api/1/getText
-        docUrl: p
+        docUrl: /p/
       apikey: 1aa1654245f6230c551b8314f39d10ffa0511a38774966b82a95fb99d5baf5ed
-# 在线编辑板 请求url
-template:
-
-  docUrl: /p/                          # 文档访问url
-
 

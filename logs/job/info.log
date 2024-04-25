@@ -523,3 +523,18 @@
 17:10:16.259 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.958 seconds (JVM running for 4.804)
 17:10:29.752 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 17:10:30.013 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:30:08.320 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 149652 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+17:30:08.325 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:30:09.997 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+17:30:09.998 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:30:09.998 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+17:30:10.123 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:30:13.303 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+17:30:13.350 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:30:14.118 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+17:30:14.595 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 6.716 seconds (JVM running for 8.721)
+17:30:26.852 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:30:27.177 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:30:27.302 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 文档重名，请重试
+17:31:00.173 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:31:00.181 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed

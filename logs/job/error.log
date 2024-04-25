@@ -7,3 +7,4 @@
 16:47:39.417 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
 16:52:52.918 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
 16:54:17.479 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+17:30:27.301 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 文档重名，请重试
