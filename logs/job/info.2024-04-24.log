@@ -1,0 +1,540 @@
+12:34:28.988 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 123764 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+12:34:28.995 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:34:30.541 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+12:34:30.541 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+12:34:30.542 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+12:34:30.646 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+12:34:34.034 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+12:34:34.099 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+12:34:35.037 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+12:34:35.514 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.161 seconds (JVM running for 10.499)
+12:35:42.851 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+12:35:42.852 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+12:35:54.256 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 124048 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+12:35:54.262 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:35:55.973 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+12:35:55.973 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+12:35:55.973 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+12:35:56.080 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+12:35:59.319 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+12:35:59.390 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+12:36:00.373 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+12:36:00.779 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.069 seconds (JVM running for 9.161)
+12:37:20.910 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:37:21.682 [http-nio-9098-exec-1] INFO  c.c.t.i.MinioTemplate - [upLoadFile,235] - minio upLoadFile success, filePath:dir4/123.xlsx
+12:37:21.851 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+12:39:10.067 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+12:39:10.069 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+12:39:30.378 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 125332 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+12:39:30.385 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:39:33.983 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+12:39:33.984 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+12:39:33.985 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+12:39:34.165 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+12:39:41.035 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+12:39:41.152 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+12:39:42.255 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+12:39:42.896 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 13.433 seconds (JVM running for 16.609)
+12:40:12.716 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:40:13.035 [http-nio-9098-exec-1] INFO  c.c.t.i.MinioTemplate - [upLoadFile,235] - minio upLoadFile success, filePath:dir4/123.xlsx
+12:40:13.597 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+12:45:10.745 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+12:45:10.751 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+12:45:20.993 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 100444 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+12:45:20.997 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:45:22.535 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+12:45:22.536 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+12:45:22.536 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+12:45:22.633 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+12:45:25.475 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+12:45:25.522 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+12:45:26.257 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+12:45:26.639 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 6.06 seconds (JVM running for 8.154)
+12:47:13.069 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:47:13.372 [http-nio-9098-exec-1] INFO  c.c.t.i.MinioTemplate - [upLoadFile,235] - minio upLoadFile success, filePath:dir4/1234.xlsx
+12:47:13.542 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+12:47:23.463 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+12:47:23.465 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+12:47:28.683 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 124772 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+12:47:28.690 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:47:30.547 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+12:47:30.548 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+12:47:30.549 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+12:47:30.678 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+12:47:34.738 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+12:47:34.800 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+12:47:35.867 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+12:47:36.486 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 8.651 seconds (JVM running for 11.39)
+12:47:41.227 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:47:41.532 [http-nio-9098-exec-1] INFO  c.c.t.i.MinioTemplate - [upLoadFile,235] - minio upLoadFile success, filePath:dir4/1234.xlsx
+12:47:41.706 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+12:49:58.748 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+12:49:58.750 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+12:50:09.295 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 124028 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+12:50:09.298 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:50:11.136 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+12:50:11.137 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+12:50:11.137 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+12:50:11.248 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+12:50:15.664 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+12:50:15.725 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+12:50:16.536 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+12:50:17.008 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 8.182 seconds (JVM running for 10.437)
+12:50:20.386 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:02:58.009 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:02:58.010 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:03:09.700 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 126136 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:03:09.706 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:03:11.562 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:03:11.564 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:03:11.564 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:03:11.717 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:03:14.873 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:03:14.928 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:03:15.818 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:03:16.282 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.23 seconds (JVM running for 9.786)
+13:04:23.420 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:04:23.796 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:04:23.905 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - [createDoc] is not a valid HTTP URL
+13:04:57.573 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:04:57.583 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:05:22.401 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 126912 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:05:22.406 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:05:24.528 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:05:24.529 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:05:24.529 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:05:24.718 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:05:29.394 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:05:29.482 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:05:30.596 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:05:31.974 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 10.584 seconds (JVM running for 15.11)
+13:05:52.574 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:05:52.939 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:05:53.038 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - [createDoc] is not a valid HTTP URL
+13:09:57.197 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:09:57.206 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:10:20.258 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 125976 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:10:20.263 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:10:21.599 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:10:21.600 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:10:21.600 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:10:21.717 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:10:25.025 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:10:25.077 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:10:25.758 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:10:26.199 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 6.366 seconds (JVM running for 8.264)
+13:10:30.417 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:10:30.744 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:11:54.075 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:11:54.081 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:12:05.361 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 126048 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:12:05.367 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:12:07.218 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:12:07.219 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:12:07.219 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:12:07.349 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:12:13.827 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:12:13.903 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:12:14.860 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:12:15.376 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 10.607 seconds (JVM running for 13.152)
+13:12:20.077 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:12:20.521 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:13:47.068 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:13:47.075 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:14:03.323 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 124380 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:14:03.332 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:14:05.194 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:14:05.195 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:14:05.195 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:14:05.322 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:14:09.056 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:14:09.118 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:14:09.872 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:14:10.340 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.911 seconds (JVM running for 10.8)
+13:14:17.110 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:14:17.576 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:15:27.814 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:15:27.822 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:15:40.593 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 127584 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:15:40.598 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:15:42.435 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:15:42.436 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:15:42.437 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:15:42.589 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:15:47.173 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:15:47.244 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:15:48.432 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:15:49.342 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 9.448 seconds (JVM running for 12.689)
+13:15:52.991 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:15:53.549 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:17:42.992 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:17:42.998 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:17:53.074 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 128628 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:17:53.079 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:17:54.547 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:17:54.548 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:17:54.548 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:17:54.641 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:17:57.750 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:17:57.826 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:17:58.529 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:17:58.930 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 6.38 seconds (JVM running for 8.665)
+13:18:09.417 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:18:09.750 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:21:05.185 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:21:05.193 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:21:16.737 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 129060 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:21:16.745 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:21:18.680 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:21:18.681 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:21:18.681 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:21:18.828 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:21:22.991 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:21:23.057 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:21:23.859 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:21:24.375 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 8.267 seconds (JVM running for 11.259)
+13:21:28.640 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:21:29.070 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:26:48.759 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:26:48.763 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:27:03.586 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 125728 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:27:03.597 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:27:05.851 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:27:05.852 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:27:05.852 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:27:06.006 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:27:10.933 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:27:11.001 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:27:12.172 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:27:13.345 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 10.775 seconds (JVM running for 13.907)
+13:27:16.438 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:27:16.798 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:32:04.316 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:32:04.322 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:32:14.743 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 129188 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:32:14.747 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:32:16.372 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:32:16.373 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:32:16.373 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:32:16.497 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:32:19.772 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:32:19.831 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:32:20.655 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:32:21.090 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 6.766 seconds (JVM running for 8.784)
+13:32:25.745 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:32:26.067 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:36:37.424 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:36:37.430 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:36:47.513 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 129016 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:36:47.516 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:36:48.938 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:36:48.938 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:36:48.939 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:36:49.035 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:36:52.451 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:36:52.528 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:36:53.689 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:36:54.291 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.24 seconds (JVM running for 9.778)
+13:37:02.277 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:37:02.630 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:38:00.920 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:38:00.929 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:38:20.370 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 127404 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:38:20.379 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:38:22.972 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:38:22.973 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:38:22.974 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:38:23.143 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:38:28.432 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:38:28.518 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:38:29.519 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:38:30.018 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 10.586 seconds (JVM running for 15.591)
+13:38:34.642 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:38:35.256 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:39:30.011 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:39:30.022 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:39:41.615 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 130492 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:39:41.620 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:39:43.355 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:39:43.357 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:39:43.357 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:39:43.502 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:39:47.928 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:39:48.008 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:39:49.079 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:39:49.574 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 8.706 seconds (JVM running for 11.459)
+13:39:54.948 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:39:55.347 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:43:20.564 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:43:20.570 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:43:31.313 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 129000 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:43:31.318 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:43:32.946 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:43:32.947 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:43:32.947 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:43:33.077 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:43:36.939 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:43:37.011 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:43:37.956 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:43:38.438 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.598 seconds (JVM running for 10.068)
+13:44:01.307 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:44:01.954 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:47:16.398 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:47:16.404 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:47:26.772 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 116444 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+13:47:26.776 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:47:28.375 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:47:28.376 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:47:28.376 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:47:28.487 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:47:32.625 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:47:32.691 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:47:33.542 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:47:34.002 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 7.702 seconds (JVM running for 9.986)
+13:47:37.281 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:47:37.282 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:51:24.250 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 119820 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+13:51:24.254 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:51:25.433 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:51:25.433 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:51:25.433 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:51:25.495 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:51:27.336 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:51:27.382 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:51:27.838 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:51:28.159 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.212 seconds (JVM running for 5.626)
+13:51:53.140 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:51:53.548 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:54:01.438 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:54:01.442 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:54:09.188 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 122080 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+13:54:09.191 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:54:10.082 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:54:10.083 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:54:10.083 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:54:10.172 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:54:12.120 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:54:12.159 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:54:12.536 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:54:12.814 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.891 seconds (JVM running for 4.855)
+13:54:15.727 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:54:16.054 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+13:56:28.127 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+13:56:28.131 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+13:56:33.883 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 122584 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+13:56:33.886 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:56:34.849 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+13:56:34.849 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:56:34.850 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+13:56:34.917 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:56:37.090 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+13:56:37.134 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:56:37.699 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+13:56:37.954 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.302 seconds (JVM running for 5.363)
+13:57:03.221 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:57:26.586 [http-nio-9098-exec-2] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+14:00:06.157 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+14:00:06.161 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+14:00:12.093 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 120836 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+14:00:12.095 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:00:13.026 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+14:00:13.027 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:00:13.027 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+14:00:13.107 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:00:15.134 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:00:15.173 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+14:00:15.590 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+14:00:15.845 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.121 seconds (JVM running for 5.073)
+14:00:20.696 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:01:52.486 [http-nio-9098-exec-3] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+14:09:30.151 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+14:09:30.155 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+14:09:35.747 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 113496 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+14:09:35.750 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:09:36.800 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+14:09:36.800 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:09:36.801 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+14:09:36.858 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:09:38.700 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:09:38.756 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+14:09:39.217 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+14:09:39.471 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.969 seconds (JVM running for 4.892)
+14:09:49.831 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:09:50.105 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+14:11:19.784 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+14:11:19.785 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+14:11:24.945 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 112672 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+14:11:24.947 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:11:25.914 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+14:11:25.915 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:11:25.915 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+14:11:25.975 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:11:27.758 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:11:27.804 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+14:11:28.187 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+14:11:28.514 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.806 seconds (JVM running for 4.786)
+14:11:29.954 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:11:30.111 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+14:12:28.498 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+14:12:28.504 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+14:12:33.741 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 124908 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+14:12:33.744 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:12:34.692 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+14:12:34.693 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:12:34.693 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+14:12:34.757 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:12:36.549 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:12:36.585 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+14:12:36.968 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+14:12:37.238 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.726 seconds (JVM running for 4.688)
+14:12:40.671 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:12:40.910 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+14:20:48.765 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+14:20:48.767 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+14:21:05.166 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 114900 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+14:21:05.169 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:21:06.451 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+14:21:06.451 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+14:21:06.452 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+14:21:06.526 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+14:21:08.613 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+14:21:08.651 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+14:21:09.016 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+14:21:09.339 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.637 seconds (JVM running for 9.364)
+14:21:14.613 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:21:14.828 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+16:08:55.084 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:08:55.086 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:08:57.513 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 129392 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+16:08:57.517 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:08:58.473 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+16:08:58.474 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:08:58.474 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+16:08:58.533 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:09:00.374 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+16:09:00.409 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:09:00.768 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+16:09:01.139 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.852 seconds (JVM running for 4.721)
+16:10:54.539 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:10:54.802 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+16:44:54.497 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:44:54.498 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:45:00.757 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 129728 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+16:45:00.761 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:45:01.641 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+16:45:01.642 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:45:01.642 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+16:45:01.716 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:45:03.567 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+16:45:52.983 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 131044 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+16:45:52.986 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:45:54.034 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+16:45:54.035 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:45:54.035 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+16:45:54.094 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:45:55.934 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+16:45:55.971 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:45:56.469 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+16:45:56.762 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.054 seconds (JVM running for 5.13)
+16:45:59.950 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:46:00.069 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+16:46:51.528 [http-nio-9098-exec-2] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+16:47:25.959 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:47:25.963 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:47:32.391 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 133092 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+16:47:32.394 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:47:33.378 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+16:47:33.379 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:47:33.379 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+16:47:33.448 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:47:35.273 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+16:47:35.308 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:47:35.813 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+16:47:36.122 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.979 seconds (JVM running for 5.014)
+16:47:39.023 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:47:39.418 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+16:52:43.489 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:52:43.490 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:52:45.911 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 127728 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+16:52:45.913 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:52:46.948 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+16:52:46.949 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:52:46.949 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+16:52:47.019 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:52:48.961 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+16:52:49.012 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:52:49.491 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+16:52:49.781 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.093 seconds (JVM running for 4.971)
+16:52:52.843 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:52:52.918 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+16:54:03.502 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:54:03.503 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:54:09.804 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 120728 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+16:54:09.808 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:54:10.736 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+16:54:10.737 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:54:10.737 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+16:54:10.803 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:54:12.801 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+16:54:12.848 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:54:13.252 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+16:54:13.506 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.033 seconds (JVM running for 4.902)
+16:54:16.990 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:54:17.479 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 401 Unauthorized: [{"code":4,"message":"no or wrong API Key","data":null}]
+17:01:08.795 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:01:08.796 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:01:12.935 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 134784 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+17:01:12.937 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:01:13.974 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+17:01:13.975 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:01:13.975 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+17:01:14.036 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:01:15.906 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+17:01:15.944 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:01:16.345 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+17:01:16.713 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.044 seconds (JVM running for 5.122)
+17:01:19.212 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:01:19.582 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:02:23.025 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:02:23.029 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:02:28.429 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 134548 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+17:02:28.433 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:02:29.401 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+17:02:29.401 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:02:29.401 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+17:02:29.463 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:02:31.459 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+17:02:31.527 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:02:31.977 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+17:02:32.257 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 4.102 seconds (JVM running for 5.056)
+17:02:39.874 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:02:40.118 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:10:04.337 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:10:04.339 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:10:12.642 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 125044 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+17:10:12.646 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:10:13.538 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+17:10:13.538 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:10:13.538 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+17:10:13.599 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:10:15.447 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+17:10:15.498 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:10:15.988 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+17:10:16.259 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.958 seconds (JVM running for 4.804)
+17:10:29.752 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:10:30.013 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:30:08.320 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 149652 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
+17:30:08.325 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:30:09.997 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+17:30:09.998 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:30:09.998 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+17:30:10.123 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:30:13.303 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+17:30:13.350 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:30:14.118 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+17:30:14.595 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 6.716 seconds (JVM running for 8.721)
+17:30:26.852 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:30:27.177 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+17:30:27.302 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 文档重名，请重试
+17:31:00.173 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:31:00.181 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
