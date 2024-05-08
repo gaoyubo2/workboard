@@ -20,4 +20,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </if>
         LIMIT #{limit}
     </select>
+
+    <select id="pagefavor" resultType="cn.cestc.domain.Event">
+        SELECT * FROM event
+        <if test="favorite != null and favorite != ''">
+            WHERE favorite = #{favorite}
+        </if>
+        LIMIT #{limit} OFFSET #{offset}
+    </select>
+
+    <select id="pagefavo" resultType="cn.cestc.domain.Event">
+        SELECT * FROM event
+        <if test="favorite != null and favorite != ''">
+            WHERE favorite = #{favorite}
+        </if>
+        LIMIT #{limit}
+    </select>
 </mapper>

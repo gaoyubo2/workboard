@@ -1,12 +1,193 @@
-09:19:30.577 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF23JXDK with PID 187436 (D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard\target\classes started by Administrator in D:\wechat_file\WeChat Files\wxid_x0oyzil4qxhv22\FileStorage\File\2024-04\workboard)
-09:19:30.589 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
-09:19:33.666 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
-09:19:33.666 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
-09:19:33.667 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
-09:19:33.759 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
-09:19:37.197 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
-09:19:37.259 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
-09:19:37.992 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
-09:19:38.393 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 8.525 seconds (JVM running for 11.539)
-09:24:24.677 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
-09:24:24.679 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+09:08:26.007 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+09:08:26.010 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+09:08:28.725 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 52208 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+09:08:28.728 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+09:08:29.600 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+09:08:29.600 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+09:08:29.601 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+09:08:29.668 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+09:08:31.345 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+09:08:31.385 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+09:08:31.763 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+09:08:32.015 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.542 seconds (JVM running for 4.413)
+09:09:14.750 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:09:15.010 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+09:33:55.207 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+09:33:55.214 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+09:38:27.562 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 55280 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+09:38:27.564 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+09:38:28.543 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+09:38:28.543 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+09:38:28.543 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+09:38:28.599 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+09:38:30.231 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+09:38:30.262 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+09:38:30.610 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+09:38:30.881 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.53 seconds (JVM running for 4.426)
+09:38:34.549 [http-nio-9098-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:38:34.792 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+09:38:34.901 [http-nio-9098-exec-1] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+09:38:37.154 [http-nio-9098-exec-4] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+09:38:53.229 [http-nio-9098-exec-5] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+09:39:06.546 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+09:39:06.550 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+09:39:09.260 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 58912 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+09:39:09.262 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+09:39:10.157 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+09:39:10.157 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+09:39:10.157 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+09:39:10.214 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+09:39:11.895 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+09:39:11.935 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+09:39:12.310 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+09:39:12.554 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.519 seconds (JVM running for 4.584)
+09:39:43.608 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:39:43.818 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+09:40:06.697 [http-nio-9098-exec-3] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+09:46:24.157 [http-nio-9098-exec-8] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+09:48:37.303 [http-nio-9098-exec-10] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 5, column: 6]
+10:04:28.955 [http-nio-9098-exec-2] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+10:04:54.559 [http-nio-9098-exec-3] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
+### The error may involve cn.cestc.mapper.ChatMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO chat  ( user_id, event_id )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
+; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
+10:16:46.500 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:16:46.501 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+10:16:52.688 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 50064 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+10:16:52.690 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+10:16:53.522 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+10:16:53.523 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:16:53.523 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+10:16:53.580 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:16:55.237 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:16:55.288 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+10:16:55.693 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+10:16:55.951 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.558 seconds (JVM running for 4.706)
+10:17:02.194 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:17:03.397 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+10:17:07.070 [http-nio-9098-exec-2] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:17:27.675 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:17:27.679 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+10:17:33.004 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 49708 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+10:17:33.008 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+10:17:33.850 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+10:17:33.850 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:17:33.850 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+10:17:33.906 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:17:35.549 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:17:35.584 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+10:17:35.959 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+10:17:36.221 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.446 seconds (JVM running for 4.265)
+10:17:37.633 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:17:37.863 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+10:17:38.669 [http-nio-9098-exec-2] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:17:54.632 [http-nio-9098-exec-4] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:18:35.532 [http-nio-9098-exec-8] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:18:47.868 [http-nio-9098-exec-7] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:18:53.552 [http-nio-9098-exec-9] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:19:17.114 [http-nio-9098-exec-2] INFO  c.c.h.GlobalExceptionHandler - [handleException,18] - null
+10:21:04.749 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:21:04.751 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+10:21:09.287 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 52328 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+10:21:09.289 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+10:21:10.153 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+10:21:10.153 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:21:10.153 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+10:21:10.210 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:21:11.830 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:21:11.874 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+10:21:12.242 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+10:21:12.495 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.449 seconds (JVM running for 4.28)
+10:21:12.640 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:21:12.792 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+10:27:16.225 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:27:16.227 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+10:27:20.913 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 53408 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+10:27:20.916 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+10:27:21.786 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+10:27:21.787 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:27:21.787 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+10:27:21.842 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:27:23.511 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:27:23.548 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+10:27:23.916 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+10:27:24.171 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.479 seconds (JVM running for 4.294)
+10:27:27.668 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:27:27.825 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+10:30:04.897 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:30:04.901 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+10:30:10.122 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 57972 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+10:30:10.124 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+10:30:11.106 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+10:30:11.107 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:30:11.107 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+10:30:11.170 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:30:12.880 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:30:12.917 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+10:30:13.303 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+10:30:13.627 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.732 seconds (JVM running for 4.496)
+10:30:17.579 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:30:17.857 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+10:31:02.791 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:31:02.799 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+10:32:01.894 [main] INFO  c.c.WorkboardApplication - [logStarting,55] - Starting WorkboardApplication using Java 1.8.0_151 on PF3KHQ3F with PID 54456 (C:\Users\Administrator\Desktop\cyl\workboard\target\classes started by Administrator in C:\Users\Administrator\Desktop\cyl\workboard)
+10:32:01.896 [main] INFO  c.c.WorkboardApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+10:32:02.880 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-9098"]
+10:32:02.880 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+10:32:02.881 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.52]
+10:32:02.953 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+10:32:04.737 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,56] - Init DruidDataSource
+10:32:04.772 [main] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+10:32:05.123 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-9098"]
+10:32:05.378 [main] INFO  c.c.WorkboardApplication - [logStarted,61] - Started WorkboardApplication in 3.698 seconds (JVM running for 4.491)
+10:32:20.637 [http-nio-9098-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:32:20.795 [http-nio-9098-exec-1] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+10:32:57.306 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+10:32:57.310 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed

@@ -41,6 +41,20 @@ public class EventController{
         page.setSize(res.size());
         return AjaxResult.success(page);
     }
+    @GetMapping("/pagefavor")
+    public AjaxResult pagefavor(@RequestParam Integer current,
+                               @RequestParam Integer favorite){
+        List<Event> res = eventService.pagefavor(current, favorite);
+        IPage<Event> page = new Page<>();
+        page.setRecords(res);
+        QueryWrapper<Event> eventQueryWrapper = new QueryWrapper<>();
+        if(favorite != null)
+            eventQueryWrapper.like("favorite", favorite);
+        page.setTotal(eventService.count(eventQueryWrapper));
+        //page.setTotal(res.size());
+        page.setSize(res.size());
+        return AjaxResult.success(page);
+    }
     @GetMapping("/list")
     public AjaxResult list(@RequestBody Event event){
         return AjaxResult.success(eventService.list(Wrappers.lambdaQuery(event)));

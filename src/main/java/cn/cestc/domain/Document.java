@@ -33,6 +33,10 @@ public class Document implements Serializable {
     private String padid;
     @ApiModelProperty(value = "作者姓名，多个作者用逗号分隔", position = 4)
     private String author;
+    @ApiModelProperty(value = "进度", position = 5)
+    private String progress;
+    @ApiModelProperty(value = "来源", position = 6)
+    private String source;
     
     public Document(Document document) {
         if (Objects.nonNull(document)) {

@@ -3,6 +3,8 @@ package cn.cestc.controller;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
 import cn.cestc.util.TemplateUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.Arrays;
@@ -27,7 +29,15 @@ public class TemplateController{
     }
     @GetMapping("/list")
     public AjaxResult list(Template template){
-        return AjaxResult.success(templateService.list(Wrappers.lambdaQuery(template)));
+        LambdaQueryWrapper<Template> queryWrapper = Wrappers.lambdaQuery();
+        // 如果 name 不为空，则添加名称模糊查询条件
+        if(StringUtils.isNotBlank(template.getName())) {
+            queryWrapper.like(Template::getName, template.getName());
+        }
+        if(StringUtils.isNotBlank(template.getContent())) {
+            queryWrapper.like(Template::getContent, template.getContent());
+        }
+        return AjaxResult.success(templateService.list(queryWrapper));
     }
     @PostMapping("/push")
     public AjaxResult add(@RequestBody Template template) {
@@ -60,8 +70,9 @@ public class TemplateController{
     @GetMapping("/createDocWithName")
     public AjaxResult createDocWithName(@RequestParam String name,
                                         @RequestParam String content,
-                                        @RequestParam String author){
-        DocUrl docUrl = templateService.createWithName(name, content, author);
+                                        @RequestParam String author
+                                        ){
+        DocUrl docUrl = templateService.createWithName(name, content, author, name);
         return docUrl == null ? AjaxResult.error("新建文件失败") : AjaxResult.success("新建文件成功",docUrl);
     }
 

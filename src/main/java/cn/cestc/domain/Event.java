@@ -39,6 +39,8 @@ public class Event implements Serializable {
     private String remarks;
     @ApiModelProperty(value = "案件类型", position = 8)
     private String eventRole;
+    @ApiModelProperty(value = "案件收藏", position = 9)
+    private Integer favorite;
     public Event(Event event) {
         if (Objects.nonNull(event)) {
             this.id=event.id;
@@ -49,6 +51,7 @@ public class Event implements Serializable {
             this.updaterId=event.updaterId;
             this.remarks=event.remarks;
             this.eventRole=event.eventRole;
+            this.favorite=event.favorite;
         }
     }
 }

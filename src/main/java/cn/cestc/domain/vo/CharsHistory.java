@@ -18,4 +18,5 @@ public class CharsHistory implements Serializable {
     private String time;
     private String userName;
     private Date date;
+    private String source;
 }

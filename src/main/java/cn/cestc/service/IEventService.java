@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IEventService extends IService<Event>{
     List<Event> pagePlus(Integer current, String key);
+
+    List<Event> pagefavor(Integer current, Integer favorite);
 }

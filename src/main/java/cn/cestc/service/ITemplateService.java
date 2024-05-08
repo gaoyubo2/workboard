@@ -15,5 +15,5 @@ public interface ITemplateService extends IService<Template>{
 
     List<CharsHistory> getAllChar();
 
-    DocUrl createWithName(String name, String content, String author);
+    DocUrl createWithName(String name, String content, String author, String source);
 }

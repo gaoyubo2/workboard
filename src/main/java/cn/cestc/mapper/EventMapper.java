@@ -15,4 +15,8 @@ public interface EventMapper extends BaseMapper<Event>{
 
 
     List<Event> pagePlus2(int limit, int offset, String key);
+
+    List<Event> pagefavor(int limit, int offset, Integer favorite);
+
+    List<Event> pagefavo(int limit, Integer favorite);
 }

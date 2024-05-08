@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -21,6 +22,16 @@ public class EventServiceImpl extends ServiceImpl<EventMapper,Event> implements 
         }
         else{
             return eventMapper.pagePlus2(12,7+(current-2)*12, key);
+        }
+    }
+
+    @Override
+    public List<Event> pagefavor(Integer current, Integer favorite) {
+        if(current == 1){
+            return eventMapper.pagefavo(7, favorite);
+        }
+        else{
+            return eventMapper.pagefavor(12,7+(current-2)*12, favorite);
         }
     }
 }

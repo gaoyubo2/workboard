@@ -74,7 +74,7 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper,Template> im
     }
 
     @Override
-    public DocUrl createWithName(String name, String content, String author) {
+    public DocUrl createWithName(String name, String content, String author, String source) {
         String padID = RandomStringUtils.randomAlphanumeric(10);
         DocUrl docUrl = templateUtil.createPad(padID, content);
         Document document = Document
@@ -82,6 +82,7 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper,Template> im
                 .author(author)
                 .name(name)
                 .padid(padID)
+                .source(source)
                 .build();
 
         Document ifExist = documentMapper.selectOne(new QueryWrapper<Document>().eq("name", name));

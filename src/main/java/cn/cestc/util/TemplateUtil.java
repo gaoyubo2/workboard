@@ -1,12 +1,16 @@
 package cn.cestc.util;
 
 import cn.cestc.constant.TemplateUrl;
+import cn.cestc.domain.Document;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
+import cn.cestc.mapper.DocumentMapper;
 import cn.hutool.json.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -17,11 +21,13 @@ import java.util.*;
 public class TemplateUtil {
     private final RestTemplateUtil restTemplateUtil;
     private final UrlBuilder urlUtil;
+    private final DocumentMapper documentMapper;
 
     @Autowired
-    public TemplateUtil(RestTemplateUtil restTemplateUtil, @Qualifier("templateUrlBuilderUtil") UrlBuilder urlUtil) {
+    public TemplateUtil(RestTemplateUtil restTemplateUtil, @Qualifier("templateUrlBuilderUtil") UrlBuilder urlUtil, DocumentMapper documentMapper) {
         this.restTemplateUtil = restTemplateUtil;
         this.urlUtil = urlUtil;
+        this.documentMapper = documentMapper;
     }
 
     public DocUrl createPad(String padID, String content) {
@@ -51,27 +57,37 @@ public class TemplateUtil {
         Map<String,String> map = new HashMap<>();
         map.put("padID", padID);
         String getChar = urlUtil.buildApiUrl("template", TemplateUrl.GET_CHAR.getMethodName());
+        System.out.println("请求的url："+getChar);
         String forObject = restTemplateUtil.get(getChar,String.class, map);
         // 使用 Gson 解析 JSON 字符串
         Gson gson = new Gson();
-        JsonObject jsonObject = gson.fromJson(forObject, JsonObject.class);
-        JsonArray messagesArray = jsonObject.getAsJsonObject("data").getAsJsonArray("messages");
-
+        System.out.println(forObject);
         // 创建一个 List 来存储 CharsHistory 对象
         List<CharsHistory> charsHistoryList = new ArrayList<>();
-        // 遍历消息数组并将每个消息转换为 CharsHistory 对象
-        for (int i = 0; i < messagesArray.size(); i++) {
-            JsonObject messageObject = messagesArray.get(i).getAsJsonObject();
-            Date date = new Date(Long.parseLong(String.valueOf(messageObject.get("time").getAsLong())));
-            CharsHistory chars = CharsHistory
-                    .builder()
-                    .text(messageObject.get("text").getAsString())
-                    .time(String.valueOf(messageObject.get("time").getAsLong()))
-                    .userId(messageObject.get("userId").getAsString())
-                    .userName(messageObject.get("userName").getAsString())
-                    .date(date)
-                    .build();
-            charsHistoryList.add(chars);
+        if (forObject != null && forObject.contains("ok")) {
+            JsonObject jsonObject = gson.fromJson(forObject, JsonObject.class);
+            JsonArray messagesArray = jsonObject.getAsJsonObject("data").getAsJsonArray("messages");
+
+            //根据padid 找到source
+            Document document = documentMapper.selectOne(new QueryWrapper<Document>().eq("padId", padID));
+            String source = document.getSource();
+            // 遍历消息数组并将每个消息转换为 CharsHistory 对象
+            for (int i = 0; i < messagesArray.size(); i++) {
+                JsonObject messageObject = messagesArray.get(i).getAsJsonObject();
+
+
+                Date date = new Date(Long.parseLong(String.valueOf(messageObject.get("time").getAsLong())));
+                CharsHistory chars = CharsHistory
+                        .builder()
+                        .text(messageObject.get("text").getAsString())
+                        .time(String.valueOf(messageObject.get("time").getAsLong()))
+                        .userId(messageObject.get("userId").getAsString())
+                        .userName(messageObject.get("userName").getAsString())
+                        .date(date)
+                        .source(source)
+                        .build();
+                charsHistoryList.add(chars);
+            }
         }
         return charsHistoryList;
     }
