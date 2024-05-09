@@ -8,4 +8,6 @@ public interface IMindRelationService extends IService<MindRelation>{
     List<Integer> getChildren(Integer id);
 
     Integer getPrevId(Integer id);
+
+    boolean deleteSelf(Integer id);
 }

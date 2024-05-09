@@ -3,13 +3,18 @@ package cn.cestc.service.impl;
 import cn.cestc.domain.dto.MindEntityDTO;
 import cn.cestc.domain.model.MindEntity;
 import cn.cestc.domain.model.MindPosition;
+import cn.cestc.domain.model.MindRelation;
 import cn.cestc.mapper.MindEntityMapper;
+import cn.cestc.mapper.MindRelationMapper;
 import cn.cestc.service.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +26,9 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
     private final IMindSharpService sharpService;
     private final IMindPositionService positionService;
     private final IMindEntityCategoryService categoryService;
+    private final PlatformTransactionManager transactionManager;
+    private final MindRelationMapper relationMapper;
+
 
     @Override
     public List<MindEntityDTO> getNextList(Integer id) {
@@ -49,6 +57,40 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
             result.add(getEntityInfoById(childId));
         }
         return result;
+    }
+
+    @Override
+    @Transactional
+    public boolean deleteSelf(Integer id) {
+//        int i = baseMapper.deleteById(id);
+//        if(i < 1){
+//            return false;
+//        }
+//        System.out.println("Entity:"+i);
+        boolean b = relationService.deleteSelf(id);
+        boolean c = positionService.deleteSelf(id);
+        return b && c;
+    }
+
+    @Override
+    @Transactional
+    public boolean changePre(Integer id, Integer newPreId) {
+        // 更新操作
+        UpdateWrapper<MindRelation> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("entity_id", id)
+                .set("prev_id", newPreId);
+
+        // 执行更新
+        relationMapper.update(null, updateWrapper);
+
+        // 删除操作
+        UpdateWrapper<MindRelation> deleteWrapper = new UpdateWrapper<>();
+        deleteWrapper.eq("next_id", id);
+
+        // 执行删除
+        relationMapper.delete(deleteWrapper);
+
+        return true;
     }
 
     // 递归方法，用于获取给定实体ID的信息及其所有子节点的信息

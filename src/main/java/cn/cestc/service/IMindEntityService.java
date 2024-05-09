@@ -9,4 +9,8 @@ public interface IMindEntityService extends IService<MindEntity>{
     List<MindEntityDTO> getNextList(Integer id);
 
     List<MindEntityDTO> getNextChildList(Integer id);
+
+    boolean deleteSelf(Integer id);
+
+    boolean changePre(Integer id, Integer newPreId);
 }

@@ -56,7 +56,11 @@ public class ChatController{
     }
     @PostMapping("/push")
     public AjaxResult add(@RequestBody Chat chat) {
-        return AjaxResult.success(chatService.save(chat));
+        try {
+            return AjaxResult.success(chatService.save(chat));
+        } catch (Exception e) {
+            return AjaxResult.error(500,"案件名重复");
+        }
     }
     @PutMapping("/edit")
     public AjaxResult edit(@RequestBody Chat chat) {
