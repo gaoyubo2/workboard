@@ -1,13 +1,12 @@
 package cn.cestc.service.impl;
 
-import cn.cestc.domain.Event;
+import cn.cestc.domain.model.Event;
 import cn.cestc.mapper.EventMapper;
 import cn.cestc.service.IEventService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service

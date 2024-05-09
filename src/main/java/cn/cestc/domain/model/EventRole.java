@@ -1,4 +1,4 @@
-package cn.cestc.domain;
+package cn.cestc.domain.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,7 +9,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Map;
 import java.util.Objects;
 @Data
 @NoArgsConstructor

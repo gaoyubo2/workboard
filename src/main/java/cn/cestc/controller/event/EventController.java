@@ -1,6 +1,6 @@
-package cn.cestc.controller;
+package cn.cestc.controller.event;
 
-import cn.cestc.domain.Event;
+import cn.cestc.domain.model.Event;
 import cn.cestc.service.IEventService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

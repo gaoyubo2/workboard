@@ -1,6 +1,6 @@
 package cn.cestc.service.impl;
 
-import cn.cestc.domain.Oss;
+import cn.cestc.domain.model.Oss;
 import cn.cestc.domain.property.OssProperties;
 import cn.cestc.domain.vo.UserInfoVO;
 import cn.cestc.mapper.OssMapper;

@@ -1,4 +1,4 @@
-package cn.cestc.controller;
+package cn.cestc.controller.event;
 import cn.cestc.service.IDocumentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import xin.altitude.cms.common.entity.AjaxResult;
 
 import xin.altitude.cms.common.entity.PageEntity;
-import cn.cestc.domain.Document;
+import cn.cestc.domain.model.Document;
 @RestController
 @RequestMapping("/document")
 @RequiredArgsConstructor

@@ -7,7 +7,7 @@
 ### Cause: java.sql.SQLException: Field 'json_data' doesn't have a default value
 ; Field 'json_data' doesn't have a default value; nested exception is java.sql.SQLException: Field 'json_data' doesn't have a default value
 16:26:26.833 [http-nio-9098-exec-8] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - JSON parse error: Cannot deserialize value of type `java.lang.String` from Array value (token `JsonToken.START_ARRAY`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Array value (token `JsonToken.START_ARRAY`)
- at [Source: (PushbackInputStream); line: 1, column: 40] (through reference chain: cn.cestc.domain.Chat["jsonData"])
+ at [Source: (PushbackInputStream); line: 1, column: 40] (through reference chain: cn.cestc.domain.model.Chat["jsonData"])
 16:29:58.535 [http-nio-9098-exec-10] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - 
 ### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'json_data' at row 1
 ### The error may exist in cn/cestc/mapper/ChatMapper.java (best guess)
@@ -33,8 +33,8 @@
 ### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'favorate' in 'field list'
 ; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'favorate' in 'field list'
 09:47:24.839 [http-nio-9098-exec-10] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Required request parameter 'key' for method parameter type String is not present
-09:47:36.715 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Required request body is missing: public xin.altitude.cms.common.entity.AjaxResult cn.cestc.controller.EventController.list(cn.cestc.domain.Event)
-09:47:57.637 [http-nio-9098-exec-2] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Required request body is missing: public xin.altitude.cms.common.entity.AjaxResult cn.cestc.controller.EventController.list(cn.cestc.domain.Event)
+09:47:36.715 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Required request body is missing: public xin.altitude.cms.common.entity.AjaxResult cn.cestc.controller.event.EventController.list(cn.cestc.domain.model.Event)
+09:47:57.637 [http-nio-9098-exec-2] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Required request body is missing: public xin.altitude.cms.common.entity.AjaxResult cn.cestc.controller.event.EventController.list(cn.cestc.domain.model.Event)
 09:52:14.030 [http-nio-9098-exec-6] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Request method 'GET' not supported
 10:02:42.397 [http-nio-9098-exec-1] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - Required request parameter 'favorite' for method parameter type Integer is not present
 10:03:38.724 [http-nio-9098-exec-6] ERROR c.c.h.GlobalExceptionHandler - [handleException,16] - nested exception is org.apache.ibatis.binding.BindingException: Parameter 'favorite' not found. Available parameters are [offset, favor, limit, param3, param1, param2]

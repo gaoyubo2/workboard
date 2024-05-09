@@ -1,6 +1,6 @@
 package cn.cestc.service;
 import com.baomidou.mybatisplus.extension.service.IService;
-import cn.cestc.domain.Event;
+import cn.cestc.domain.model.Event;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package cn.cestc.controller;
 
-import cn.cestc.domain.Oss;
+import cn.cestc.domain.model.Oss;
 import cn.cestc.domain.vo.OssFile;
 import cn.cestc.service.IOssService;
 import cn.cestc.template.OssTemplate;

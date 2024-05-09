@@ -1,4 +1,4 @@
-package cn.cestc.controller;
+package cn.cestc.controller.event;
 
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import cn.cestc.service.ITemplateService;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
-import cn.cestc.domain.Template;
+import cn.cestc.domain.model.Template;
 @RestController
 @RequestMapping("/template")
 @RequiredArgsConstructor

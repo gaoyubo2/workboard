@@ -1,8 +1,6 @@
 package cn.cestc.domain.vo;
 
-import cn.cestc.domain.Chat;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import io.swagger.annotations.ApiModelProperty;
+import cn.cestc.domain.model.Chat;
 import lombok.*;
 import lombok.experimental.Accessors;
 

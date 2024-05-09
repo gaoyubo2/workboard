@@ -1,12 +1,11 @@
-package cn.cestc.controller;
+package cn.cestc.controller.event;
 
-import cn.cestc.domain.Chat;
-import cn.cestc.domain.Event;
+import cn.cestc.domain.model.Chat;
+import cn.cestc.domain.model.Event;
 import cn.cestc.domain.vo.ChatWithEventVO;
 import cn.cestc.service.IChatService;
 import cn.cestc.service.IEventService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -19,7 +18,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 @RestController

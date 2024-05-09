@@ -1,24 +1,19 @@
-package cn.cestc.controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import java.util.Arrays;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import xin.altitude.cms.common.entity.AjaxResult;
-import java.util.List;
-import cn.cestc.domain.MindEntity;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import xin.altitude.cms.common.entity.PageEntity;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+package cn.cestc.controller.mind;
+
+import cn.cestc.domain.dto.MindEntityDTO;
+import cn.cestc.domain.model.MindEntity;
 import cn.cestc.service.IMindEntityService;
-import cn.cestc.mapper.MindEntityMapper;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import xin.altitude.cms.common.entity.AjaxResult;
+import xin.altitude.cms.common.entity.PageEntity;
+
+import java.util.Arrays;
+import java.util.List;
+
 @RestController
-@RequestMapping("/cestc/mind/entity")
+@RequestMapping("/mind")
 public class MindEntityController{
     @Autowired
     private IMindEntityService mindEntityService;
@@ -45,5 +40,17 @@ public class MindEntityController{
     @GetMapping(value = "/detail/{id}")
     public AjaxResult detail(@PathVariable("id") Integer id) {
         return AjaxResult.success(mindEntityService.getById(id));
+    }
+
+    @GetMapping("/nextAll")
+    public AjaxResult nextList(@RequestParam("id") Integer id){
+        List<MindEntityDTO> nextEntityList =  mindEntityService.getNextList(id);
+
+        return AjaxResult.success(nextEntityList);
+    }
+    @GetMapping("/nextChild")
+    public AjaxResult nextChild(@RequestParam("id") Integer id){
+        List<MindEntityDTO> nextEntityList =  mindEntityService.getNextChildList(id);
+        return AjaxResult.success(nextEntityList);
     }
 }

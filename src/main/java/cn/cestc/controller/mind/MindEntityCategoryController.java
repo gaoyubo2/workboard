@@ -1,22 +1,14 @@
-package cn.cestc.controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import java.util.Arrays;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import xin.altitude.cms.common.entity.AjaxResult;
-import java.util.List;
-import cn.cestc.mapper.MindEntityCategoryMapper;
+package cn.cestc.controller.mind;
+
+import cn.cestc.domain.model.MindEntityCategory;
 import cn.cestc.service.IMindEntityCategoryService;
-import org.springframework.web.bind.annotation.RestController;
-import cn.cestc.domain.MindEntityCategory;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Arrays;
 @RestController
 @RequestMapping("/cestc/mind/entity/category")
 public class MindEntityCategoryController{

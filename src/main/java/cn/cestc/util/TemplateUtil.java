@@ -1,7 +1,7 @@
 package cn.cestc.util;
 
 import cn.cestc.constant.TemplateUrl;
-import cn.cestc.domain.Document;
+import cn.cestc.domain.model.Document;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
 import cn.cestc.mapper.DocumentMapper;
@@ -10,7 +10,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

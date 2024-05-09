@@ -1,6 +1,6 @@
-package cn.cestc.controller;
+package cn.cestc.controller.event;
 
-import cn.cestc.domain.EventRole;
+import cn.cestc.domain.model.EventRole;
 import cn.cestc.service.IEventRoleService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import lombok.RequiredArgsConstructor;

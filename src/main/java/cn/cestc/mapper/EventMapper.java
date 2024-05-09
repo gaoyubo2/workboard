@@ -1,6 +1,6 @@
 package cn.cestc.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import cn.cestc.domain.Event;
+import cn.cestc.domain.model.Event;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.transaction.annotation.Transactional;

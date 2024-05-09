@@ -1,49 +1,46 @@
-package cn.cestc.controller;
-import cn.cestc.service.IMindSharpService;
+package cn.cestc.controller.mind;
+import cn.cestc.service.IMindRelationService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Arrays;
-import cn.cestc.domain.MindSharp;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import cn.cestc.mapper.MindSharpMapper;
 import xin.altitude.cms.common.entity.AjaxResult;
-import java.util.List;
+import cn.cestc.domain.model.MindRelation;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import xin.altitude.cms.common.entity.PageEntity;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 @RestController
-@RequestMapping("/cestc/mind/sharp")
-public class MindSharpController{
+@RequestMapping("/cestc/mind/relation")
+public class MindRelationController{
     @Autowired
-    private IMindSharpService mindSharpService;
+    private IMindRelationService mindRelationService;
     @GetMapping("/page")
-    public AjaxResult page(PageEntity pageEntity,MindSharp mindSharp){
-        return AjaxResult.success(mindSharpService.page(pageEntity.toPage(), Wrappers.lambdaQuery(mindSharp)));
+    public AjaxResult page(PageEntity pageEntity,MindRelation mindRelation){
+        return AjaxResult.success(mindRelationService.page(pageEntity.toPage(), Wrappers.lambdaQuery(mindRelation)));
     }
     @GetMapping("/list")
-    public AjaxResult list(MindSharp mindSharp){
-        return AjaxResult.success(mindSharpService.list(Wrappers.lambdaQuery(mindSharp)));
+    public AjaxResult list(MindRelation mindRelation){
+        return AjaxResult.success(mindRelationService.list(Wrappers.lambdaQuery(mindRelation)));
     }
     @PostMapping("/push")
-    public AjaxResult add(@RequestBody MindSharp mindSharp) {
-        return AjaxResult.success(mindSharpService.save(mindSharp));
+    public AjaxResult add(@RequestBody MindRelation mindRelation) {
+        return AjaxResult.success(mindRelationService.save(mindRelation));
     }
     @PutMapping("/edit")
-    public AjaxResult edit(@RequestBody MindSharp mindSharp) {
-        return AjaxResult.success(mindSharpService.updateById(mindSharp));
+    public AjaxResult edit(@RequestBody MindRelation mindRelation) {
+        return AjaxResult.success(mindRelationService.updateById(mindRelation));
     }
     @DeleteMapping("/delete/{ids}")
     public AjaxResult delete(@PathVariable Integer[] ids) {
-        return AjaxResult.success(mindSharpService.removeByIds(Arrays.asList(ids)));
+        return AjaxResult.success(mindRelationService.removeByIds(Arrays.asList(ids)));
     }
     @GetMapping(value = "/detail/{id}")
     public AjaxResult detail(@PathVariable("id") Integer id) {
-        return AjaxResult.success(mindSharpService.getById(id));
+        return AjaxResult.success(mindRelationService.getById(id));
     }
 }

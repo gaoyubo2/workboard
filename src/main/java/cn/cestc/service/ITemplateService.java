@@ -1,5 +1,5 @@
 package cn.cestc.service;
-import cn.cestc.domain.Template;
+import cn.cestc.domain.model.Template;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
 import com.baomidou.mybatisplus.extension.service.IService;
