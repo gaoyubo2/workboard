@@ -1,13 +1,15 @@
-package cn.cestc.domain.dto;
+package cn.cestc.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MindEntityDTO {
+public class MindEntityVO {
     private Integer id;
     private String name;
     private Integer categoryId;
@@ -17,5 +19,6 @@ public class MindEntityDTO {
     private Float positionX;
     private Float positionY;
     private Integer prevId;
-    private Integer nextId;
+
+    private List<MindEntityVO> children;
 }

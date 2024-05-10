@@ -1,12 +1,12 @@
 package cn.cestc.controller.mind;
 
 import cn.cestc.domain.dto.MindEntityDTO;
+import cn.cestc.domain.vo.MindEntityVO;
 import cn.cestc.domain.model.MindEntity;
 import cn.cestc.service.IMindEntityService;
 import cn.cestc.service.IMindRelationService;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
@@ -47,13 +47,13 @@ public class MindEntityController{
 
     @GetMapping("/nextAll")
     public AjaxResult nextList(@RequestParam("id") Integer id){
-        List<MindEntityDTO> nextEntityList =  mindEntityService.getNextList(id);
+        List<MindEntityVO> nextEntityList =  mindEntityService.getNextList(id);
 
         return AjaxResult.success(nextEntityList);
     }
     @GetMapping("/nextChild")
     public AjaxResult nextChild(@RequestParam("id") Integer id){
-        List<MindEntityDTO> nextEntityList =  mindEntityService.getNextChildList(id);
+        List<MindEntityVO> nextEntityList =  mindEntityService.getNextChildList(id);
         return AjaxResult.success(nextEntityList);
     }
 
@@ -68,6 +68,11 @@ public class MindEntityController{
                                 @RequestParam("newPreId") Integer newPreId){
         boolean flag = mindEntityService.changePre(id, newPreId);
         return flag ? AjaxResult.success("修改节点成功") : AjaxResult.error("修改节点失败-Controller");
-
     }
+    @PostMapping("/addEntity")
+    public AjaxResult addEntity(@RequestBody MindEntityDTO entityDTO){
+        return AjaxResult.success(mindEntityService.addEntity(entityDTO));
+    }
+
+
 }

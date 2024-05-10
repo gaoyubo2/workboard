@@ -1,6 +1,7 @@
 package cn.cestc.service.impl;
 
 import cn.cestc.domain.dto.MindEntityDTO;
+import cn.cestc.domain.vo.MindEntityVO;
 import cn.cestc.domain.model.MindEntity;
 import cn.cestc.domain.model.MindPosition;
 import cn.cestc.domain.model.MindRelation;
@@ -31,9 +32,9 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
 
 
     @Override
-    public List<MindEntityDTO> getNextList(Integer id) {
+    public List<MindEntityVO> getNextList(Integer id) {
         // 创建用于存储结果的列表
-        List<MindEntityDTO> resultList = new ArrayList<>();
+        List<MindEntityVO> resultList = new ArrayList<>();
 
         // 获取给定实体ID的所有子节点ID列表
         List<Integer> childIds = relationService.getChildren(id);
@@ -41,7 +42,7 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
 
         // 遍历子节点ID列表，并递归地获取每个子节点的信息
         for (Integer childId : childIds) {
-            MindEntityDTO childDto = getEntityInfo(childId);
+            MindEntityVO childDto = getEntityInfo(childId);
             childDto.setPrevId(id);
             resultList.add(childDto);
         }
@@ -50,9 +51,9 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
     }
 
     @Override
-    public List<MindEntityDTO> getNextChildList(Integer id) {
+    public List<MindEntityVO> getNextChildList(Integer id) {
         List<Integer> childIds = relationService.getChildren(id);
-        List<MindEntityDTO> result = new ArrayList<>(childIds.size());
+        List<MindEntityVO> result = new ArrayList<>(childIds.size());
         for (Integer childId : childIds){
             result.add(getEntityInfoById(childId));
         }
@@ -92,11 +93,75 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
 
         return true;
     }
+    // 添加节点
+    @Override
+    @Transactional
+    public Integer addEntity(MindEntityDTO entityDTO) {
+        MindEntity entity = createEntity(entityDTO);
+        saveEntity(entity);
+
+        MindPosition position = createPosition(entityDTO, entity.getId());
+        savePosition(position);
+
+        MindRelation relation = createRelation(entityDTO, entity.getId());
+        saveRelation(relation);
+
+        return entity.getId();
+    }
+    private MindEntity createEntity(MindEntityDTO entityDTO) {
+        MindEntity entity = new MindEntity();
+        BeanUtils.copyProperties(entityDTO, entity);
+        return entity;
+    }
+
+    private void saveEntity(MindEntity entity) {
+        save(entity);
+    }
+
+    private MindPosition createPosition(MindEntityDTO entityDTO, Integer entityId) {
+        MindPosition position = new MindPosition();
+        position.setEntityId(entityId);
+        position.setPositionX(entityDTO.getPositionX());
+        position.setPositionY(entityDTO.getPositionY());
+        return position;
+    }
+
+    private void savePosition(MindPosition position) {
+        positionService.save(position);
+    }
+
+    private MindRelation createRelation(MindEntityDTO entityDTO, Integer entityId) {
+        // 创建父节点指向自己的指针
+        saveRelationPreToSelf(entityDTO, entityId);
+
+        // 创建自己的
+        MindRelation relation = new MindRelation();
+        relation.setEntityId(entityId);
+        relation.setPrevId(entityDTO.getPrevId());
+        return relation;
+    }
+
+    private void saveRelationPreToSelf(MindEntityDTO entityDTO, Integer entityId) {
+        MindRelation relationPreToSelf = new MindRelation();
+        //查询父节点的prevId
+        Integer preEntityPrevId = relationService.getOne(new QueryWrapper<MindRelation>()
+                .eq("entity_id", entityDTO.getPrevId())
+                .eq("next_id", 0)).getPrevId();
+        relationPreToSelf.setEntityId(entityDTO.getPrevId());
+        relationPreToSelf.setPrevId(preEntityPrevId);
+        relationPreToSelf.setNextId(entityId);
+        relationService.save(relationPreToSelf);
+    }
+
+    private void saveRelation(MindRelation relation) {
+        relationService.save(relation);
+    }
+
 
     // 递归方法，用于获取给定实体ID的信息及其所有子节点的信息
-    private MindEntityDTO getEntityInfo(Integer entityId) {
+    private MindEntityVO getEntityInfo(Integer entityId) {
         // 获取给定实体ID的信息，样式id,类型id等
-         MindEntityDTO entityDto = getEntityInfoById(entityId);
+         MindEntityVO entityDto = getEntityInfoById(entityId);
 
         // 获取给定实体ID的所有子节点ID列表
         List<Integer> childIds = relationService.getChildren(entityId);
@@ -108,11 +173,11 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
         }
 
         // 创建用于存储子节点信息的列表
-        List<MindEntityDTO> children = new ArrayList<>();
+        List<MindEntityVO> children = new ArrayList<>();
 
         // 遍历子节点ID列表，并递归地获取每个子节点的信息
         for (Integer childId : childIds) {
-            MindEntityDTO childDto = getEntityInfo(childId);
+            MindEntityVO childDto = getEntityInfo(childId);
             childDto.setPrevId(entityId);
             children.add(childDto);
         }
@@ -127,8 +192,8 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
      * @param entityId id
      * @return 实体DTO
      */
-    private MindEntityDTO getEntityInfoById(Integer entityId) {
-        MindEntityDTO dto = getEntityBasicInfoById(entityId);
+    private MindEntityVO getEntityInfoById(Integer entityId) {
+        MindEntityVO dto = getEntityBasicInfoById(entityId);
         return getEntityExtraInfoById(dto);
     }
 
@@ -137,12 +202,12 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
      * @param entityId id
      * @return 基本实体
      */
-    private MindEntityDTO getEntityBasicInfoById(Integer entityId) {
+    private MindEntityVO getEntityBasicInfoById(Integer entityId) {
 
         // 调用MindEntityMapper的selectById方法，根据实体ID获取实体信息
         MindEntity entity = getById(entityId);
         // 构造MindEntityDTO对象，并设置实体的属性
-        MindEntityDTO dto = new MindEntityDTO();
+        MindEntityVO dto = new MindEntityVO();
         BeanUtils.copyProperties(entity, dto);
         return dto;
     }
@@ -152,7 +217,7 @@ public class MindEntityServiceImpl extends ServiceImpl<MindEntityMapper,MindEnti
      * @param dto 基本实体
      * @return 携带额外信息的entity
      */
-    private MindEntityDTO getEntityExtraInfoById(MindEntityDTO dto){
+    private MindEntityVO getEntityExtraInfoById(MindEntityVO dto){
         //获取样式id
         Integer sharpId = categoryService.getById(dto.getCategoryId()).getSharpId();
         dto.setSharpId(sharpId);
