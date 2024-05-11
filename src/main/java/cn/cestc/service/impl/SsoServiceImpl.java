@@ -26,8 +26,11 @@ public class SsoServiceImpl implements SsoService {
     @Override
     public UserInfoVO getUserInfoById(Integer uid) {
         String getUserById = urlUtil.buildApiUrl("sso", SsoUrl.GET_USER_WITH_ROLE.getMethodName());
-        System.out.println("userWithRole:"+getUserById);
         Map<String, String> map = Collections.singletonMap("uid", String.valueOf(uid));
-        return restTemplateUtil.get(getUserById, UserInfoVO.class,map);
+//        方法一：
+        return restTemplateUtil.get(getUserById, UserInfoVO.class, map);
+        //方法二：
+//        String strUserInfo = restTemplateUtil.get(getUserById, String.class, map);
+//        return JSON.toJavaObject(JSON.parseObject(strUserInfo), UserInfoVO.class);
     }
 }

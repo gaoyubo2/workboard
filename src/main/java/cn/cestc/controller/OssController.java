@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
 
+import java.util.Collections;
 import java.util.List;
 @RestController
 @RequestMapping("/oss")
@@ -27,7 +28,9 @@ public class OssController{
                              @RequestParam("filePath") String filePath,
                              @RequestParam(required = false,value = "extra") String extra) {
         boolean flag = ossService.uploadFile(file,uid,filePath,extra);
-        return flag ? AjaxResult.success() : AjaxResult.error("上传失败");
+        // 获取文件内部数据
+        List<String> fileData = minioTemplate.getFileData(filePath, Collections.singletonList(file.getOriginalFilename()));
+        return flag ? AjaxResult.success(fileData.get(0)) : AjaxResult.error("上传失败");
     }
     @GetMapping("getFilesByProject")
     public AjaxResult getFilesByProject(@RequestParam("filePath") String filePath) {
