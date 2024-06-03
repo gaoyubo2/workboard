@@ -94,3 +94,7 @@ cestc:
         docUrl: /p/
       apikey: 1aa1654245f6230c551b8314f39d10ffa0511a38774966b82a95fb99d5baf5ed
 
+graceful-response:
+  # 响应风格设置
+  response-style: 1
+  exclude-return-types: xin.altitude.cms.common.entity.AjaxResult

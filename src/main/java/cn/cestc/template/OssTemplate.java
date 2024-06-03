@@ -73,7 +73,9 @@ public interface OssTemplate {
      * @Param filePath: 文件路径
      * @return: void
      */
-    void downloadFile(HttpServletResponse response, String fileName, String filePath);
+    void downloadFile(HttpServletResponse response, String folderPath, String fileName);
+
+    String getResignedObjectUrl( String folderPath, String fileName, Integer expires);
 
     List<OssFile> getOssFilesInFolder(String filePath);
 
@@ -85,4 +87,13 @@ public interface OssTemplate {
      * @return List<byte[]> 文件内部数据列表
      */
     List<String> getFileData(String filePath, List<String> fileNames);
+
+    /**
+     * 获取单个文件内部数据
+     *
+     * @param folderName 目录名称
+     * @param fileName 文件名
+     * @return String 文件内部数据
+     */
+    String getSingleFileData(String folderName, String fileName);
 }

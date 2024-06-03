@@ -277,48 +277,61 @@ public class MinioTemplate implements OssTemplate {
     /**
      * @Description: 下载文件
      * @Param response: 响应
+     * @Param folderPath: 文件目录路径
      * @Param fileName: 文件名
-     * @Param filePath: 文件路径
      * @return: void
      */
     @Override
-    public void downloadFile(HttpServletResponse response, String fileName, String filePath) {
+    public void downloadFile(HttpServletResponse response, String folderPath, String fileName) {
         GetObjectResponse is = null;
+        String filePath = folderPath + "/" + fileName;
         try {
-            GetObjectArgs getObjectArgs =
-                    GetObjectArgs.builder().bucket(ossProperties.getBucketName()).object(filePath)
-                            .build();
+            GetObjectArgs getObjectArgs = GetObjectArgs.builder()
+                    .bucket(ossProperties.getBucketName())
+                    .object(filePath)
+                    .build();
+
             is = client.getObject(getObjectArgs);
+
             // 设置文件ContentType类型，这样设置，会自动判断下载文件类型
             response.setContentType("application/x-msdownload");
             response.setCharacterEncoding(ENCODING);
             // 设置文件头：最后一个参数是设置下载的文件名并编码为UTF-8
             response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(fileName, ENCODING));
+
             IoUtil.copy(is, response.getOutputStream());
-            logger.info("minio downloadFile success, filePath:{}", filePath);
+            logger.info("minio downloadFile success, fileName: {}, filePath: {}", fileName, filePath);
         } catch (Exception e) {
-            logger.error("minio downloadFile Exception:{}", e);
+            logger.error("minio downloadFile Exception, fileName: {}, filePath: {}, exception: {}", fileName, filePath, e.getMessage(), e);
         } finally {
             IoUtil.close(is);
         }
     }
 
+
     /**
      * 获取文件外链
      *
-     * @param bucketName bucket名称
+     * @param folderPath 文件目录路径
      * @param fileName   文件名称
-     * @param expires    过期时间
-     * @return url
+     * @param expires    过期时间（秒）
+     * @return 预签名URL
      */
-    public String getResignedObjectUrl(String bucketName, String fileName, Integer expires) {
+    @Override
+    public String getResignedObjectUrl(String folderPath, String fileName, Integer expires) {
         String link = "";
         try {
+            String filePath = folderPath + "/" + fileName;
             link = client.getPresignedObjectUrl(
-                    GetPresignedObjectUrlArgs.builder().method(Method.GET).bucket(getBucketName(bucketName))
-                            .object(fileName).expiry(expires).build());
+                    GetPresignedObjectUrlArgs.builder()
+                            .method(Method.GET)
+                            .bucket(ossProperties.getBucketName())
+                            .object(filePath)
+                            .expiry(expires)
+                            .build());
+            logger.info("minio getResignedObjectUrl success, fileFolder: {}, fileName: {}, expires: {}, link: {}", folderPath, fileName, expires, link);
         } catch (Exception e) {
-            logger.error("minio getResignedObjectUrl is fail, fileName:{}", fileName);
+            logger.error("minio getResignedObjectUrl failed, fileFolder: {}, fileName: {}, exception: {}", folderPath, fileName, e.getMessage(), e);
         }
         return link;
     }
@@ -484,5 +497,49 @@ public class MinioTemplate implements OssTemplate {
         }
 
         return fileDataList;
+    }
+    /**
+     * 获取单个文件内部数据
+     *
+     * @param folderName 目录名称
+     * @param fileName 文件名
+     * @return String 文件内部数据
+     */
+    @Override
+    public String getSingleFileData(String folderName, String fileName) {
+        String bucketName = ossProperties.getBucketName();
+        String fileData = null;
+
+        try {
+            Iterable<Result<Item>> results = client.listObjects(ListObjectsArgs.builder()
+                    .bucket(getBucketName(bucketName))
+                    .prefix(folderName + "/")
+                    .build());
+
+            for (Result<Item> result : results) {
+                Item item = result.get();
+                if (item.isDir()) continue;
+                // 只读取指定文件
+                if (getFileNameFromPath(item.objectName()).equals(fileName)) {
+                    try (InputStream inputStream = client.getObject(GetObjectArgs.builder()
+                            .bucket(getBucketName(bucketName))
+                            .object(item.objectName())
+                            .build())) {
+                        String fileExtension = getFileExtension(fileName);
+                        //指定读取策略
+                        FileHandler handler = fileHandlers.get(fileExtension.toLowerCase());
+                        if (handler != null) {
+                            // 读取文件内部数据
+                            fileData = handler.handleFile(inputStream);
+                        }
+                    }
+                    break; // 找到文件后跳出循环
+                }
+            }
+        } catch (Exception e) {
+            logger.error("minio getFileData Exception:{}", e);
+        }
+
+        return fileData;
     }
 }

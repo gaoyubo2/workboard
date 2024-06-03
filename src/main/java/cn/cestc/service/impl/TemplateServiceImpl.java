@@ -3,6 +3,7 @@ import cn.cestc.domain.model.Document;
 import cn.cestc.domain.model.Template;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
+import cn.cestc.exception.DocNameErrorException;
 import cn.cestc.mapper.DocumentMapper;
 import cn.cestc.mapper.TemplateMapper;
 import cn.cestc.service.ITemplateService;
@@ -87,7 +88,7 @@ public class TemplateServiceImpl extends ServiceImpl<TemplateMapper,Template> im
 
         Document ifExist = documentMapper.selectOne(new QueryWrapper<Document>().eq("name", name));
         if(ifExist != null){
-            throw new RuntimeException("文档重名，请重试");
+            throw new DocNameErrorException();
         }
         //插入
         documentMapper.insert(document);
