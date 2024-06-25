@@ -131,6 +131,16 @@ public class OssController{
     @GetMapping("/page")
     public AjaxResult page(PageEntity pageEntity,Oss oss){
         return AjaxResult.success(ossService.page(pageEntity.toPage(), Wrappers.lambdaQuery(oss)));
+//        List<Event> res = eventService.pagePlus(current, key);
+//        IPage<Event> page = new Page<>();
+//        page.setRecords(res);
+//        QueryWrapper<Event> eventQueryWrapper = new QueryWrapper<>();
+//        if(key != null)
+//            eventQueryWrapper.like("name", key);
+//        page.setTotal(eventService.count(eventQueryWrapper));
+//        //page.setTotal(res.size());
+//        page.setSize(res.size());
+//        return AjaxResult.success(page);
     }
     @GetMapping("/list")
     public AjaxResult list(Oss oss){

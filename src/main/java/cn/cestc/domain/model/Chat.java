@@ -33,7 +33,7 @@ public class Chat implements Serializable {
     @ApiModelProperty(value = "会话数据", position = 6)
     private String jsonData;
     @ApiModelProperty(value = "会话id", position = 7)
-    private Integer sessionId;
+    private String sessionId;
     
     public Chat(Chat chat) {
         if (Objects.nonNull(chat)) {

@@ -1,20 +1,20 @@
 package cn.cestc.controller.event;
 
+import cn.cestc.domain.model.Template;
 import cn.cestc.domain.vo.CharsHistory;
 import cn.cestc.domain.vo.DocUrl;
+import cn.cestc.service.ITemplateService;
 import cn.cestc.util.TemplateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import java.util.Arrays;
-import java.util.List;
-
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import cn.cestc.service.ITemplateService;
 import xin.altitude.cms.common.entity.AjaxResult;
 import xin.altitude.cms.common.entity.PageEntity;
-import cn.cestc.domain.model.Template;
+
+import java.util.Arrays;
+import java.util.List;
 @RestController
 @RequestMapping("/template")
 @RequiredArgsConstructor
@@ -70,10 +70,11 @@ public class TemplateController{
     @GetMapping("/createDocWithName")
     public AjaxResult createDocWithName(@RequestParam String name,
                                         @RequestParam String content,
-                                        @RequestParam String author
+                                        @RequestParam String author,
+                                        @RequestParam String source
                                         ){
-        DocUrl docUrl = templateService.createWithName(name, content, author, name);
-        return docUrl == null ? AjaxResult.error("新建文件失败") : AjaxResult.success("新建文件成功",docUrl);
+        DocUrl docUrl = templateService.createWithName(name, content, author, source);
+        return docUrl == null ? AjaxResult.error("新建文档失败") : AjaxResult.success("新建文档成功",docUrl);
     }
 
     /**

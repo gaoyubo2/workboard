@@ -1,6 +1,5 @@
 package cn.cestc.domain.vo;
 
-import cn.cestc.domain.model.Chat;
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -24,13 +23,5 @@ public class ChatWithEventVO implements Serializable {
     private Integer sessionId;
     private String source;
 
-    public void setChat(Chat c) {
-        this.id = c.getId();
-        this.name = c.getName();
-        this.eventId = c.getEventId();
-        this.userId = c.getUserId();
-        this.createTime = c.getCreateTime();
-        this.jsonData = c.getJsonData();
-        this.sessionId = c.getSessionId();
-    }
+
 }

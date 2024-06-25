@@ -1,4 +1,5 @@
 package cn.cestc.service.impl;
+
 import cn.cestc.domain.model.Document;
 import cn.cestc.domain.model.Template;
 import cn.cestc.domain.vo.CharsHistory;
